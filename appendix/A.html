@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="keywords" content="Page-specific keywords">
+	<title>Appendix A - TopoHuBERT</title>
+	<link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="appendix-styles.css">
+</head>
+
+<body>
+  <header class="nav-header">
+    <div class="main-nav">
+       <div class="container">
+         <nav class="main-nav__links">
+	   <ul>
+	     <li>
+ 	       <a href="../index.html#home">Home</a>
+	     </li>
+	     <li>
+	       <a href="../index.html#appendix">List of Appendices</a>
+	     </li>
+           </ul>
+         </nav>
+       </div>
+  </div>
+</header>
+
+<div class="appendix-header">
+  <div class="container">
+     <h1> Separation of single models </h1>
+     <h3> Appendix A  </h3>
+  </div>
+</div>
+
+<div class="appendix-body">
+  <div class="container">
+    <p> ASVSpoof dataset contains sapmples from 19 models of speech synthethis named <b><i>A01-A19</i></b>. Data from models <b><i>A01-A06</i></b> is included in both train and validation splits, data from <b><i>A07-A19</i></b> - in test split only. </p>
+    <p> In Section 4.3 of our article we show that individual heads are quite good at separating individual speech synthesize models, but due to lack of space we included results only for four of the models.
+ Here we can present complete results for all 19 models. As in the article, for each of them we found a head that is the best at separating this model's speech from bonafide (as described in Section 4.3), plotted distributions of average length of <i>H<sub>0</sub></i> intervals, and found optimal in terms of Equal Error Rate (EER) threshold classifier.
+All those results are given in the table below.
+</p>
+<p> Histograms for synthetic speech are given in red, for bonafide - in blue. Dashed line marks the threshold of optimal classifier. <i>Please note that we enumerate layers and heads of HuBERT starting from 1. </i> </p>
+  <div style="overflow-x:auto;">
+  <table>
+    <tr>
+       <td><div class="image-wrapper">
+           <div class="sub-caption">
+               <p><b><i>A01</i></b>, &nbsp head 6 from layer 5</p>
+           </div>
+           <img img src="data/A/A01-5-4.png" alt="Image is not available">
+           <div class="sub-caption">
+              <p> EER 0.9% at threshold 0.7 </p>
+           </div>
+       </div></td>
+        <td><div class="image-wrapper">
+           <div class="sub-caption">
+               <p><b><i>A02</i></b>, &nbsp head 5 from layer 9</p>
+           </div>
+           <img img src="data/A/A02-8-4.png" alt="Image is not available">
+           <div class="sub-caption">
+              <p> EER 29.805% at threshold 0.9372</p>
+           </div>
+       </div></td>
+       <td><div class="image-wrapper">
+           <div class="sub-caption">
+               <p><b><i>A03</i></b>, &nbsp head 6 from layer 6</p>
+           </div>
+           <img img src="data/A/A03-5-5.png" alt="Image is not available">
+           <div class="sub-caption">
+              <p> EER 11.00% at threshold 0.731 </p>
+           </div>
+       </div></td>
+       <td><div class="image-wrapper">
+           <div class="sub-caption">
+               <p><b><i>A04</i></b>, &nbsp head 6 from layer 5 </p>
+           </div>
+           <img img src="data/A/A04-4-5.png" alt="Image is not available">
+           <div class="sub-caption">
+              <p> EER 6.577% at threshold 0.67 </p>
+           </div>
+       </div></td>
+    </tr>
+    <tr>
+       <td><div class="image-wrapper">
+           <div class="sub-caption">
+               <p><b><i>A05</i></b>, &nbsp head 5 from layer 5</p>
+           </div>
+           <img img src="data/A/A05-4-4.png" alt="Image is not available">
+           <div class="sub-caption">
+              <p> EER 22.5% at threshold 0.9396 </p>
+           </div>
+       </div></td>
+        <td><div class="image-wrapper">
+           <div class="sub-caption">
+               <p><b><i>A06</i></b>, &nbsp head ? from layer ?</p>
+           </div>
+           <img img src="data/A/A02-11-6.png" alt="Image is not available">
+           <div class="sub-caption">
+              <p> EER ???% at threshold 0.??? </p>
+           </div>
+       </div></td>
+       <td><div class="image-wrapper">
+           <div class="sub-caption">
+               <p><b><i>A07</i></b>, &nbsp head 1 from layer 12</p>
+           </div>
+           <img img src="data/A/A07-11-0.png" alt="Image is not available">
+           <div class="sub-caption">
+              <p> EER 1.00% at threshold 0.778 </p>
+           </div>
+       </div></td>
+       <td><div class="image-wrapper">
+           <div class="sub-caption">
+               <p><b><i>A08</i></b>, &nbsp head 3 from layer 6 </p>
+           </div>
+           <img img src="data/A/A08-5-2.png" alt="Image is not available">
+           <div class="sub-caption">
+              <p> EER 1.0% at threshold 0.689 </p>
+           </div>
+       </div></td>
+    </tr>
+    <tr>
+       <td><div class="image-wrapper">
+           <div class="sub-caption">
+               <p><b><i>A09</i></b>, &nbsp head 3 from layer 6</p>
+           </div>
+           <img img src="data/A/A09-5-2.png" alt="Image is not available">
+           <div class="sub-caption">
+              <p> EER 1.2% at threshold 0.690 </p>
+           </div>
+       </div></td>
+        <td><div class="image-wrapper">
+           <div class="sub-caption">
+               <p><b><i>A10</i></b>, &nbsp head 1 from layer 7</p>
+           </div>
+           <img img src="data/A/A10-6-0.png" alt="Image is not available">
+           <div class="sub-caption">
+              <p> EER 0.7% at threshold 0.764 </p>
+           </div>
+       </div></td>
+       <td><div class="image-wrapper">
+           <div class="sub-caption">
+               <p><b><i>A11</i></b>, &nbsp head 1 from layer 12</p>
+           </div>
+           <img img src="data/A/A11-11-0.png" alt="Image is not available">
+           <div class="sub-caption">
+              <p> EER 0.7% at threshold 0.769 </p>
+           </div>
+       </div></td>
+       <td><div class="image-wrapper">
+           <div class="sub-caption">
+               <p><b><i>A12</i></b>, &nbsp head 5 from layer 7 </p>
+           </div>
+           <img img src="data/A/A12-6-4.png" alt="Image is not available">
+           <div class="sub-caption">
+              <p> EER 12.57% at threshold 0.8831 </p>
+           </div>
+       </div></td>
+    </tr>
+    <tr>
+       <td><div class="image-wrapper">
+           <div class="sub-caption">
+               <p><b><i>A13</i></b>, &nbsp head 4 from layer 5</p>
+           </div>
+           <img img src="data/A/A13-4-3.png" alt="Image is not available">
+           <div class="sub-caption">
+              <p> EER 1.0% at threshold 0.6 </p>
+           </div>
+       </div></td>
+        <td><div class="image-wrapper">
+           <div class="sub-caption">
+               <p><b><i>A14</i></b>, &nbsp head 1 from layer 12</p>
+           </div>
+           <img img src="data/A/A14-11-0.png" alt="Image is not available">
+           <div class="sub-caption">
+              <p> EER 0.03% at threshold 0.84 </p>
+           </div>
+       </div></td>
+       <td><div class="image-wrapper">
+           <div class="sub-caption">
+               <p><b><i>A15</i></b>, &nbsp head 1 from layer 12</p>
+           </div>
+           <img img src="data/A/A15-11-0.png" alt="Image is not available">
+           <div class="sub-caption">
+              <p> EER 4.3% at threshold 0.788 </p>
+           </div>
+       </div></td>
+       <td><div class="image-wrapper">
+           <div class="sub-caption">
+               <p><b><i>A16</i></b>, &nbsp head 12 from layer 7 </p>
+           </div>
+           <img img src="data/A/A16-6-11.png" alt="Image is not available">
+           <div class="sub-caption">
+              <p> EER 5.87% at threshold 0.768 </p>
+           </div>
+       </div></td>
+    </tr>
+    <tr>
+       <td><div class="image-wrapper">
+           <div class="sub-caption">
+               <p><b><i>A17</i></b>, &nbsp head 5 from layer 5</p>
+           </div>
+           <img img src="data/A/A17-4-4.png" alt="Image is not available">
+           <div class="sub-caption">
+              <p> EER 9.7% at threshold 0.355 </p>
+           </div>
+       </div></td>
+        <td><div class="image-wrapper">
+           <div class="sub-caption">
+               <p><b><i>A18</i></b>, &nbsp head 7 from layer 2</p>
+           </div>
+           <img img src="data/A/A18-1-6.png" alt="Image is not available">
+           <div class="sub-caption">
+              <p> EER 8.6% at threshold 0.9595 </p>
+           </div>
+       </div></td>
+       <td><div class="image-wrapper">
+           <div class="sub-caption">
+               <p><b><i>A19</i></b>, &nbsp head 7 from layer 4</p>
+           </div>
+           <img img src="data/A/A19-3-6.png" alt="Image is not available">
+           <div class="sub-caption">
+              <p> EER 35.6% at threshold 0.9581 </p>
+           </div>
+       </div></td>
+       <td><div class="image-wrapper">
+ 
+       </div></td>
+    </tr>
+  </table>
+  </div>
+  </div>
+</div>
+
+<p> &nbsp </p>
+<i>Created in Notepad and hosted by Github. (C) Unnameable authors, somewhere on Earth, 2022. </i>
+</body>
+</html>

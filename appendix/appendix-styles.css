@@ -1,0 +1,63 @@
+.appendix-header {
+    padding-top: 50px;
+    width: 100%;
+    margin: 0 0;
+    clear: both;
+    text-align: center;
+}
+
+.appendix-header h1 {
+    position: relative;
+    font-weight: 200;
+    font-size: 35px;
+}
+
+.appendix-header h3 {
+    position: relative;
+    font-size: 20px;
+}
+
+.appendix-body p {
+    text-indent: 50px;
+    text-align: justify;
+    display: inline-block;
+}
+
+.image-wrapper {
+    width: 100%;
+}
+
+.image-wrapper img{
+    top: 0;
+    right: 0;
+    left: 0;
+
+    max-width: 220pt;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.image-wrapper super-caption, .image-wrapper sub-caption {
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-wrapper p {
+    text-align: justify;
+    display: inline-block;
+}
+
+table {
+   width:100%;
+   border: 1px solid rgb(49, 97, 62);
+   border-collapse: collapse;
+}
+
+th, td {
+  text-align: center;
+  border: 1px solid rgb(49, 97, 62);
+}
