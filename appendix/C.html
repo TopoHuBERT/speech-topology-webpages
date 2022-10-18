@@ -38,12 +38,71 @@
 <div class="appendix-body">
   <div class="container">
     <p> In Section 5.1 of our article we show that there is a strong correlation between our attention features and certain features derived from power spectrum of the audio sample (we will call them "spectral features")
- that are commonly used in speech analysis. Here we present the 
+ that are commonly used in speech analysis. Here we present the full results for Pearson Correlation coefficient between Spectral features and all 6 of our attention features, namely:
+ <ul>
+	<li>[Mean element of the] Trace of the attention matrix</li>
+	<li> Asymmetry measure of the attention matrix (sum of the elements above main diagonal) </li>
+	<li>[Average] Attention to the next element </li>
+	<li>[Average] Attention to the previous element </li>
+	<li>[Average] Length of the bars for <i>H<sub>0</sub></i>-barcode when attention matrix considered a graph (per described in the paper) </li>
+	<li>[Average] Length of the bars for <i>H<sub>0</sub></i>-barcode when attention matrix considered a point cloud (distances between tokens are calculated as <i>l<sub>1</sub></i>-distances between rows of the matrix) </li>
+</ul>
+
   </p>
+
+
+<div style="overflow-x:auto;">
+<table>
+  <tr>
+      <td><div class="image-wrapper">
+         <div class="super-caption">
+		<p><b>Avg. trace of the attention matrix</b></p>
+         </div>
+         <img src="data/C/trace.png" alt="Image is not available">
+      </div></td></tr>
+<tr>
+    <td><div class="image-wrapper">
+         <div class="super-caption">
+		<p><b>Asymmetry</b></p>
+         </div>
+         <img src="data/C/asymmetricity.png" alt="Image is not available">
+      </div></td>
+  </tr>
+  <tr>
+    <td><div class="image-wrapper">
+         <div class="super-caption">
+		<p><b> Avg. Attention to the next element</b></p>
+         </div>
+         <img src="data/C/next-token.png" alt="Image is not available">
+      </div></td></tr><tr>
+    <td><div class="image-wrapper">
+         <div class="super-caption">
+		<p><b>AVG. Attention to the previous element</b></p>
+         </div>
+         <img src="data/C/prev-token.png" alt="Image is not available">
+      </div></td>
+  </tr>
+  <tr>
+    <td><div class="image-wrapper">
+         <div class="super-caption">
+		<p><b>Avg. length of <i>H<sub>0</sub></i>&#8212;bars, graph</b></p>
+         </div>
+         <img src="data/C/h0.png" alt="Image is not available">
+      </div></td></tr><tr>
+    <td><div class="image-wrapper">
+         <div class="super-caption">
+		<p><b>Avg. length of <i>H<sub>0</sub></i>&#8212;bars, point cloud</b></p>
+         </div>
+         <img src="data/C/l1.png" alt="Image is not available">
+      </div></td>
+  </tr>
+</table>
+/<div>
+
   </div>
 </div>
 
 <p> &nbsp </p>
-<i>Created in Notepad and hosted by Github. (C) Unnameable authors, somewhere on Earth, 2022. </i>
+<i>Created in Notepad and hosted by Github. (C) Authors that should not be mentioned, somewhere on Earth, 2022. </i>
 </body>
 </html>
