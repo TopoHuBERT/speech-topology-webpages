@@ -37,7 +37,41 @@
 
 <div class="appendix-body">
   <div class="container">
-    <p> Not yet implemented. </p>
+    <p> Our approach to this task is same as for the separation of individual models &#8212; we are looking for the heads that best separate distributions of <i>H<sub>0</sub>M</i> for samples from two gfiven people.
+We once again use data from ASVSpoof 2019 dataset (only the bonafide speech), we use it &#8212; and not VoxCeleb1 &#8212; because it has much higher number of samples per speaker (around 150 on average) and this the estimation of distribution statistics
+is much more stable.
+    </p>
+    <p>
+       Once again, it turns out that for every pair of speakers there are several heads that separate them fairly good (SQ > 1), however thsi time there are np cases of very good separation
+(SQ > 3).
+Figure 1 below shows plots of distributions from best head for three speaker pairs. Speakers presented are:
+    <ul>
+      <li> Female speakers: LA_0069, LA_0072, LA_0078  </li>
+      <li> Male speakers: LA_0071, LA_0073, LA_0076  </li>
+    </ul></p>
+        <table class="noborder">
+           <tr class="noborder">
+             <td class="noborder"><div class="image-wrapper">
+                 <img src="data/B/single-person-separation.png" />
+                 <div class="sub-caption">
+                 <p> <b>Figure B.1. </b> Left picture &#8212; both speaker are male; Center &#8212; both speakers are female; Right &#8212; both speakers are male. </p>
+                 </div>
+             </div></td>
+           </tr>
+        </table>
+
+    <p> From plots it is clearly seen that heads can distinguish speakers equally well regardless of their gender. On the other hand, there is no head that can separate male speech in general (from all male speakers) from female speech in general anyhow good. 
+Best separation (with SQ = 0.72) is achieved at head 8 from layer 4. Corresponding distributions are presented at Figure 2</p> 
+        <table class="noborder">
+           <tr class="noborder">
+             <td class="noborder"> <div class="image-wrapper">
+               <img src="data/B/AllvsAll.png" />
+               <div class="sub-caption">
+                 <p> <b>Figure B.2.</b>  Distributions of <i>H<sub>0</sub>M</i> for genreal male and general female speech. </p>
+               </div>
+             </div></td>
+           </tr>
+        </table>
   </div>
 </div>
 
