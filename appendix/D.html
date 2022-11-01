@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="keywords" content="Page-specific keywords">
+	<title>Appendix D - TopoHuBERT</title>
+	<link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="appendix-styles.css">
+</head>
+
+<body>
+  <header class="nav-header">
+    <div class="main-nav">
+       <div class="container">
+         <nav class="main-nav__links">
+	   <ul>
+	     <li>
+ 	       <a href="../index.html#home">Home</a>
+	     </li>
+	     <li>
+	       <a href="../index.html#appendix">List of Appendices</a>
+	     </li>
+           </ul>
+         </nav>
+       </div>
+  </div>
+</header>
+
+<div class="appendix-header">
+  <div class="container">
+     <h1> Separating individual emotions </h1>
+     <h3> Appendix D </h3>
+  </div>
+</div>
+
+<div class="appendix-body">
+  <div class="container">
+    <p> In a similar fashion to our experiments on separation individual speakers we did a ceries of experimetns on separating individual emotions from each other. This is a "restricted" version of Emotion Recognition task. 
+It turns out that for most pairs (of emotions) there is no head able to separate them "quite well" (in terminology of Section 4, <b>Restricted tasks</b>). Here we will present results for one pair of emotions anger/sadness that can be separated. </p>
+
+    <table class="noborder">
+       <tr class="noborder">
+           <td class="noborder"> 
+               <div class="image-wrapper">
+                   <div class="super-caption"> <p><b>H<sub>0</sub>M distributions at head 4 from layer 2</b></p> </div>
+                   <img src="data/D/ddd-0000.png"  height=300pt />
+                   <div class="sub-caption"> <p><b>Figure D.1</b> An example of H<sub>0</sub>M distributions for Angry and Sad speech. Dashed line is the threshold of optimal classifier </p> </div>
+               </div>
+           </td>
+       </tr>
+   </table>
+<p>Even for the optimal classifier (dashed line at the Figure D.1) there are some wrongly classified utterances. Below we present some examples of audio samples where this classifier was correct and mistaken.  </p>
+
+   <table class="noborder">
+       <tr class="noborder">
+           <td class="noborder"> <p><b>Classified as angry... </b></p>
+           </td>
+           <td class="noborder"> <p><b>Classified as sad... </b></p>
+           </td>
+       </tr>
+    </table>
+
+    <table class="noborder">
+       <tr class="noborder">
+           <td class="noborder"> <p><b>correctly </b></p>
+           </td>
+           <td class="noborder"><p><b>misclassified </b></p>
+           </td>
+           <td class="noborder"> <p><b>correctly </b></p>
+           </td>
+           <td class="noborder"><p><b>misclassified </b></p>
+           </td>
+       </tr>
+       <tr class="noborder">
+           <td class="noborder"> <audio controls autoplay>
+                                 <source src="data/D/audio/angry_trueclass/Ses02F_script03_2_F042.wav" type="audio/wav">
+                                 Your browser does not support the audio element.
+                                 </audio>
+                                 </br>
+                                 <audio controls autoplay>
+                                 <source src="data/D/audio/angry_trueclass/Ses02F_script03_2_M047.wav" type="audio/wav">
+                                 Your browser does not support the audio element.
+                                 </audio>
+                                 </br>
+                                 <audio controls autoplay>
+                                 <source src="data/D/audio/angry_trueclass/Ses05M_script03_2_M044.wav" type="audio/wav">
+                                 Your browser does not support the audio element.
+                                 </audio>
+           </td>
+           <td class="noborder"> <audio controls autoplay>
+                                 <source src="data/D/audio/angry_misclass/Ses04M_script02_2_F018.wav" type="audio/wav">
+                                 Your browser does not support the audio element.
+                                 </audio>
+                                 </br>
+                                 <audio controls autoplay>
+                                 <source src="data/D/audio/angry_misclass/Ses05F_impro02_F021.wav" type="audio/wav">
+                                 Your browser does not support the audio element.
+                                 </audio>
+                                 </br>
+                                 <audio controls autoplay>
+                                 <source src="data/D/audio/angry_misclass/Ses05M_script02_2_F023.wav" type="audio/wav">
+                                 Your browser does not support the audio element.
+                                 </audio>
+           </td>
+           <td class="noborder"> <audio controls autoplay>
+                                 <source src="data/D/audio/sad_trueclass/Ses01F_impro02_M011.wav" type="audio/wav">
+                                 Your browser does not support the audio element.
+                                 </audio>
+                                 </br>
+                                 <audio controls autoplay>
+                                 <source src="data/D/audio/sad_trueclass/Ses01F_script01_3_M026.wav" type="audio/wav">
+                                 Your browser does not support the audio element.
+                                 </audio>
+                                 </br>
+                                 <audio controls autoplay>
+                                 <source src="data/D/audio/sad_trueclass/Ses02M_script01_3_M025.wav" type="audio/wav">
+                                 Your browser does not support the audio element.
+                                 </audio>
+           </td>
+           <td class="noborder"> <audio controls autoplay>
+                                 <source src="data/D/audio/sad_misclass/Ses03M_impro05b_M033.wav" type="audio/wav">
+                                 Your browser does not support the audio element.
+                                 </audio>
+                                 </br>
+                                 <audio controls autoplay>
+                                 <source src="data/D/audio/sad_misclass/Ses04F_script03_2_M031.wav" type="audio/wav">
+                                 Your browser does not support the audio element.
+                                 </audio>
+                                 </br>
+                                 <audio controls autoplay>
+                                 <source src="data/D/audio/sad_misclass/Ses04M_script03_2_M034.wav" type="audio/wav">
+                                 Your browser does not support the audio element.
+                                 </audio>
+           </td>
+       </tr>
+    </table>
+
+  </div>
+</div>
+
+<p> &nbsp </p>
+<i>Created in Notepad and hosted by Github. (C) Unnameable authors, somewhere on Earth, 2022. </i>
+</body>
+</html>
