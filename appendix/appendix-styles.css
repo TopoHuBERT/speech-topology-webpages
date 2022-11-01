@@ -32,7 +32,9 @@
     right: 0;
     left: 0;
 
+    display: block;
     max-width: 100%;
+    max-height: 400pt;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
@@ -46,9 +48,23 @@
     margin-right: auto;
 }
 
-.image-wrapper p {
-    text-align: justify;
+.super-caption h4 {
+   margin-botton: 0pt;
+   margin-top: 0pt;
+}
+
+.sub-caption p {
+    margin-top: 6pt;
+    margin-bottom: 6pt;
+    margin-left: auto;
+    margin-right: auto;
     display: inline-block;
+    font-size: 14px;
+}
+
+.super-caption p {
+    margin-top: 12pt;
+    margin-bottom: 6pt;
 }
 
 table {
@@ -60,4 +76,16 @@ table {
 th, td {
   text-align: center;
   border: 1px solid rgb(49, 97, 62);
+}
+
+.noborder {
+
+   text-align: center;
+   border: 0px solid rgb(49, 97, 62);
+   border-collapse: collapse;
+}
+
+.appendix-body ul {
+   margin-top: 0px;
+   margin-bottom: 0px;
 }
