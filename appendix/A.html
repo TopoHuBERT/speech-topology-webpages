@@ -11,23 +11,35 @@
 </head>
 
 <body>
-  <header class="nav-header">
-    <div class="main-nav">
-       <div class="container">
-         <nav class="main-nav__links">
-	   <ul>
-	     <li>
- 	       <a href="../index.html#home">Home</a>
-	     </li>
-	     <li>
-	       <a href="../index.html#appendix">List of Appendices</a>
-	     </li>
-           </ul>
-         </nav>
-       </div>
-  </div>
-</header>
-
+  <nav class="main-nav__links">
+    <ul>
+      <li>
+        <a href="../index.html#home">Home</a>
+      </li>
+      <li>
+	<a href="../index.html#repository">Paper and Code</a>
+      </li>
+      <li>
+	<a href="../index.html#appendix"> Appendices</a> 
+        <ul>
+          <li><a href="A.html">A. Separation of single models</a> </li>
+          <li><a href="B.html">B. Separation of a pair of speakers</a> </li>
+          <li><a href="C.html">C. Attention meets Power Spectrum</a> </li>
+          <li><a href="D.html">D. Separation of a pair of emotions</a> </li>
+         </ul>
+      </li>
+      <li>
+	<a href="../index.html#tda">TDA FAQ</a>
+        <ul>
+          <li><a href="../tda/rtd_example.html">An example of RTD computation</a>  </li>
+        </ul>
+       </li>
+       <li>
+         <a href="../index.html#contacts">Contact us</a>
+       </li>
+     </ul>
+  </nav>
+<div class="outer-border"><div class="inner-border">
 <div class="appendix-header">
   <div class="container">
      <h1> Separation of single models </h1>
@@ -39,10 +51,10 @@
   <div class="container">
     <p> ASVSpoof dataset contains sapmples from 19 models of speech synthethis named <b><i>A01-A19</i></b>. Data from models <b><i>A01-A06</i></b> is included in both train and validation splits, data from <b><i>A07-A19</i></b> - in test split only. </p>
     <p> In Section 4.3 of our article we show that individual heads are quite good at separating individual speech synthesize models, but due to lack of space we included results only for four of the models.
- Here we can present complete results for all 19 models. As in the article, for each of them we found a head that is the best at separating this model's speech from bonafide (as described in Section 4.3), plotted distributions of average length of <i>H<sub>0</sub></i> intervals, and found optimal in terms of Equal Error Rate (EER) threshold classifier.
+ Here we can present complete results for all 19 models. As in the article, for each of them we found a head that is the best at separating this model's speech from bonafide (as described in Section 4.3), plotted distributions of <i>H</i><span class="supsub"><sup>m, sym</sup><sub>0</sub></span>, and found optimal in terms of Equal Error Rate (EER) threshold classifier.
 All those results are given in the table below.
 </p>
-<p> Histograms for synthetic speech are given in red, for bonafide - in blue. Dashed line marks the threshold of optimal classifier. <i>Please note that we enumerate layers and heads of HuBERT starting from 1. </i> </p>
+<p> Histograms for synthetic speech are given in red, for bonafide &#8212; in blue. Dashed line marks the threshold of optimal classifier. <i>Please note that we enumerate layers and heads of HuBERT starting from 1. </i> </p>
   <div style="overflow-x:auto;">
   <table>
     <tr>
@@ -232,9 +244,9 @@ All those results are given in the table below.
   </table>
   </div>
   </div>
-</div>
+</div></div></div>
 
 <p> &nbsp </p>
-<i>Created in Notepad and hosted by Github. (C) Unnameable authors, somewhere on Earth, 2022. </i>
+<i>Designed in Notepad and hosted by Github. (C) Unnameable authors, somewhere on Earth, 2022. </i>
 </body>
 </html>

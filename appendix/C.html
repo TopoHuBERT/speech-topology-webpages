@@ -11,23 +11,36 @@
 </head>
 
 <body>
-  <header class="nav-header">
-    <div class="main-nav">
-       <div class="container">
-         <nav class="main-nav__links">
-	   <ul>
-	     <li>
- 	       <a href="../index.html#home">Home</a>
-	     </li>
-	     <li>
-	       <a href="../index.html#appendix">List of Appendices</a>
-	     </li>
-           </ul>
-         </nav>
-       </div>
-  </div>
-</header>
+  <nav class="main-nav__links">
+    <ul>
+      <li>
+        <a href="../index.html#home">Home</a>
+      </li>
+      <li>
+	<a href="../index.html#repository">Paper and Code</a>
+      </li>
+      <li>
+	<a href="../index.html#appendix"> Appendices</a> 
+        <ul>
+          <li><a href="A.html">A. Separation of single models</a> </li>
+          <li><a href="B.html">B. Separation of a pair of speakers</a> </li>
+          <li><a href="C.html">C. Attention meets Power Spectrum</a> </li>
+          <li><a href="D.html">D. Separation of a pair of emotions</a> </li>
+         </ul>
+      </li>
+      <li>
+	<a href="../index.html#tda">TDA FAQ</a>
+        <ul>
+          <li><a href="../tda/rtd_example.html">An example of RTD computation</a>  </li>
+        </ul>
+       </li>
+       <li>
+         <a href="../index.html#contacts">Contact us</a>
+       </li>
+     </ul>
+  </nav>
 
+<div class="outer-border"><div class="inner-border">
 <div class="appendix-header">
   <div class="container">
      <h1> Attention meets Power Spectrum </h1>
@@ -38,14 +51,15 @@
 <div class="appendix-body">
   <div class="container">
     <p> In Section 5.1 of our article we show that there is a strong correlation between our attention features and certain features derived from power spectrum of the audio sample (we will call them "spectral features")
- that are commonly used in speech analysis. Here we present the full results for Pearson Correlation coefficient between Spectral features and all 6 of our attention features, namely:
+ that are commonly used in speech analysis. Here we present the full results for Pearson Correlation coefficient between Spectral features and all 6 of our attention features (see paragraph <b>Features</b> in Section 2 of the paper), namely:
  <ul>
-	<li>[Mean element of the] Trace of the attention matrix</li>
-	<li> Asymmetry measure of the attention matrix (sum of the elements above main diagonal) </li>
-	<li>[Average] Attention to the next element </li>
-	<li>[Average] Attention to the previous element </li>
-	<li>[Average] Length of the bars for <i>H<sub>0</sub></i>-barcode when attention matrix considered a graph (per described in the paper) </li>
-	<li>[Average] Length of the bars for <i>H<sub>0</sub></i>-barcode when attention matrix considered a point cloud (distances between tokens are calculated as <i>l<sub>1</sub></i>-distances between rows of the matrix) </li>
+	<li>(<i>Average element of the</i>) Trace of the attention matrix</li>
+	<li> Asymmetry measure of the attention matrix (average of the elements above main diagonal) </li>
+	<li>(<i>Average</i>) Attention to the next element </li>
+	<li>(<i>Average</i>) Attention to the previous element </li>
+	<li><i>H</i><span class="supsub"><sup>m, sym</sup><sub>0</sub></span> (<i>H</i><span class="supsub"><sup>m</sup><sub>0</sub></span> for the graph with adjacency matrix A′ = 1 − max (A<span class="supsub"><sup></sup><sub>attn</sub></span>, A<span class="supsub"><sup>T</sup><sub>attn</sub></span>
+), that is, the symmetrization of the attention matrix A<sub>attn</sub>) </li>
+	<li><i>H</i><span class="supsub"><sup>m, pc</sup><sub>0</sub></span> (<i>H</i><span class="supsub"><sup>m</sup><sub>0</sub></span> for the rows of the attention matrix considered as a point cloud with the L<sub>1</sub>-distance.) </li>
 </ul>
 
   </p>
@@ -56,14 +70,14 @@
   <tr>
       <td><div class="image-wrapper">
          <div class="super-caption">
-		<p><b>Avg. trace of the attention matrix</b></p>
+		<p><b>Average element of the trace of the attention matrix</b></p>
          </div>
          <img src="data/C/trace.png" alt="Image is not available">
       </div></td></tr>
 <tr>
     <td><div class="image-wrapper">
          <div class="super-caption">
-		<p><b>Asymmetry</b></p>
+		<p><b>Asymmetry measure of the attention matrix </b></p>
          </div>
          <img src="data/C/asymmetricity.png" alt="Image is not available">
       </div></td>
@@ -71,13 +85,13 @@
   <tr>
     <td><div class="image-wrapper">
          <div class="super-caption">
-		<p><b> Avg. Attention to the next element</b></p>
+		<p><b> Average attention to the next element</b></p>
          </div>
          <img src="data/C/next-token.png" alt="Image is not available">
       </div></td></tr><tr>
     <td><div class="image-wrapper">
          <div class="super-caption">
-		<p><b>AVG. Attention to the previous element</b></p>
+		<p><b>Average attention to the previous element</b></p>
          </div>
          <img src="data/C/prev-token.png" alt="Image is not available">
       </div></td>
@@ -85,24 +99,24 @@
   <tr>
     <td><div class="image-wrapper">
          <div class="super-caption">
-		<p><b>Avg. length of <i>H<sub>0</sub></i>&#8212;bars, graph</b></p>
+		<p><b><i>H</i><span class="supsub"><sup>m, sym</sup><sub>0</sub></span></b></p>
          </div>
          <img src="data/C/h0.png" alt="Image is not available">
       </div></td></tr><tr>
     <td><div class="image-wrapper">
          <div class="super-caption">
-		<p><b>Avg. length of <i>H<sub>0</sub></i>&#8212;bars, point cloud</b></p>
+		<p><b><i>H</i><span class="supsub"><sup>m, pc</sup><sub>0</sub></span></b></p>
          </div>
          <img src="data/C/l1.png" alt="Image is not available">
       </div></td>
   </tr>
 </table>
-/<div>
-
+</div>
   </div>
 </div>
 
 <p> &nbsp </p>
-<i>Created in Notepad and hosted by Github. (C) Authors that should not be mentioned, somewhere on Earth, 2022. </i>
+</div></div>
+<i>Designed in Notepad and hosted by Github. (C) Authors that should not be mentioned, somewhere on Earth, 2022. </i>
 </body>
 </html>

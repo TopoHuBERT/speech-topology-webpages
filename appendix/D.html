@@ -11,23 +11,36 @@
 </head>
 
 <body>
-  <header class="nav-header">
-    <div class="main-nav">
-       <div class="container">
-         <nav class="main-nav__links">
-	   <ul>
-	     <li>
- 	       <a href="../index.html#home">Home</a>
-	     </li>
-	     <li>
-	       <a href="../index.html#appendix">List of Appendices</a>
-	     </li>
-           </ul>
-         </nav>
-       </div>
-  </div>
-</header>
+  <nav class="main-nav__links">
+    <ul>
+      <li>
+        <a href="../index.html#home">Home</a>
+      </li>
+      <li>
+	<a href="../index.html#repository">Paper and Code</a>
+      </li>
+      <li>
+	<a href="../index.html#appendix"> Appendices</a> 
+        <ul>
+          <li><a href="A.html">A. Separation of single models</a> </li>
+          <li><a href="B.html">B. Separation of a pair of speakers</a> </li>
+          <li><a href="C.html">C. Attention meets Power Spectrum</a> </li>
+          <li><a href="D.html">D. Separation of a pair of emotions</a> </li>
+         </ul>
+      </li>
+      <li>
+	<a href="../index.html#tda">TDA FAQ</a>
+        <ul>
+          <li><a href="../tda/rtd_example.html">An example of RTD computation</a>  </li>
+        </ul>
+       </li>
+       <li>
+         <a href="../index.html#contacts">Contact us</a>
+       </li>
+     </ul>
+  </nav>
 
+<div class="outer-border"><div class="inner-border">
 <div class="appendix-header">
   <div class="container">
      <h1>  Separation of a pair of emotions </h1>
@@ -37,21 +50,21 @@
 
 <div class="appendix-body">
   <div class="container">
-    <p> In a similar fashion to our experiments on separation individual speakers we did a ceries of experimetns on separating individual emotions from each other. This is a "restricted" version of Emotion Recognition task. 
-We performed these studies on data from IEMOCAP dataset. It turns out that for most pairs (of emotions) there is no head able to separate them "quite well" (in terminology of Section 4, <b>Restricted tasks</b>). Here we will present results for one pair of emotions anger/sadness that can be separated. </p>
+    <p> In a similar fashion to our experiments on the separation of individual speakers, we did a ceries of experimetns on separating individual emotions from each other. This is a "restricted" version of the Emotion Recognition task. 
+We performed these studies on data from the IEMOCAP dataset. It turns out that for most pairs (of emotions) there is no head able to separate them "quite well" (in the terminology of Section 4, <b>Restricted tasks</b>). Here we will present results for one pair of emotions&nbsp;&#8212; anger/sadness &#8212; that can be separated. </p>
 
     <table class="noborder">
        <tr class="noborder">
            <td class="noborder"> 
                <div class="image-wrapper">
-                   <div class="super-caption"> <p><b>H<sub>0</sub>M distributions at head 4 from layer 2</b></p> </div>
+                   <div class="super-caption"> <p><b><i>H</i><span class="supsub"><sup>m, sym</sup><sub>0</sub></span> distributions at head 4 from layer 2</b></p> </div>
                    <img src="data/D/ddd-0000.png"  height=300pt />
-                   <div class="sub-caption"> <p><b>Figure D.1</b> An example of H<sub>0</sub>M distributions for Angry and Sad speech (for this plot we randomly sampled 500 uterances from each of nthe two classes). Dashed line is the threshold of optimal classifier </p> </div>
+                   <div class="sub-caption"> <p><b>Figure D.1</b> An example of <i>H</i><span class="supsub"><sup>m, sym</sup><sub>0</sub></span> distributions for Angry and Sad speech (for this plot we sampled about 500 uterances from each of the two classes). The dashed line is the threshold of optimal classifier </p> </div>
                </div>
            </td>
        </tr>
    </table>
-<p>Even for the optimal classifier (dashed line at the Figure D.1) there are some wrongly classified utterances. Below we present some examples of audio samples where this classifier was correct and mistaken.  </p>
+<p>Even for the optimal classifier (dashed line at Figure D.1) there are some wrongly classified utterances. Below we present some examples of audio samples where this classifier was correct or mistaken.  </p>
 
    <table class="noborder">
        <tr class="noborder">
@@ -141,6 +154,8 @@ We performed these studies on data from IEMOCAP dataset. It turns out that for m
 </div>
 
 <p> &nbsp </p>
+</div></div>
+
 <i>Created in Notepad and hosted by Github. (C) Unnameable authors, somewhere on Earth, 2022. </i>
 </body>
 </html>

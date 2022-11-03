@@ -11,23 +11,36 @@
 </head>
 
 <body>
-  <header class="nav-header">
-    <div class="main-nav">
-       <div class="container">
-         <nav class="main-nav__links">
-	   <ul>
-	     <li>
- 	       <a href="../index.html#home">Home</a>
-	     </li>
-	     <li>
-	       <a href="../index.html#appendix">List of Appendices</a>
-	     </li>
-           </ul>
-         </nav>
-       </div>
-  </div>
-</header>
+  <nav class="main-nav__links">
+    <ul>
+      <li>
+        <a href="../index.html#home">Home</a>
+      </li>
+      <li>
+	<a href="../index.html#repository">Paper and Code</a>
+      </li>
+      <li>
+	<a href="../index.html#appendix"> Appendices</a> 
+        <ul>
+          <li><a href="A.html">A. Separation of single models</a> </li>
+          <li><a href="B.html">B. Separation of a pair of speakers</a> </li>
+          <li><a href="C.html">C. Attention meets Power Spectrum</a> </li>
+          <li><a href="D.html">D. Separation of a pair of emotions</a> </li>
+         </ul>
+      </li>
+      <li>
+	<a href="../index.html#tda">TDA FAQ</a>
+        <ul>
+          <li><a href="../tda/rtd_example.html">An example of RTD computation</a>  </li>
+        </ul>
+       </li>
+       <li>
+         <a href="../index.html#contacts">Contact us</a>
+       </li>
+     </ul>
+  </nav>
 
+<div class="outer-border"><div class="inner-border">
 <div class="appendix-header">
   <div class="container">
      <h1> Separation of a pair of speakers </h1>
@@ -37,7 +50,7 @@
 
 <div class="appendix-body">
   <div class="container">
-    <p> Our approach to this task is same as for the separation of individual models &#8212; we are looking for the heads that best separate distributions of <i>H<sub>0</sub>M</i> for samples from two gfiven people.
+    <p> Our approach to this task is same as for the separation of individual models &#8212; we are looking for the heads that best separate distributions of <i>H</i><span class="supsub"><sup>m, sym</sup><sub>0</sub></span> for samples from two gfiven people.
 We once again use data from ASVSpoof 2019 dataset (only the bonafide speech), we use it &#8212; and not VoxCeleb1 &#8212; because it has much higher number of samples per speaker (around 150 on average) and this the estimation of distribution statistics
 is much more stable.
     </p>
@@ -67,15 +80,16 @@ Best separation (with SQ = 0.72) is achieved at head 8 from layer 4. Correspondi
              <td class="noborder"> <div class="image-wrapper">
                <img src="data/B/AllvsAll.png" />
                <div class="sub-caption">
-                 <p> <b>Figure B.2.</b>  Distributions of <i>H<sub>0</sub>M</i> for genreal male and general female speech. </p>
+                 <p> <b>Figure B.2.</b>  Distributions of <i>H</i><span class="supsub"><sup>m, sym</sup><sub>0</sub></span> for speech from all male and all female speakers presented in dataset. </p>
                </div>
              </div></td>
            </tr>
         </table>
   </div>
 </div>
-
 <p> &nbsp </p>
-<i>Created in Notepad and hosted by Github. (C) Unnameable authors, somewhere on Earth, 2022. </i>
+</div></div>
+
+<i>Designed in Notepad and hosted by Github. (C) Unnameable authors, somewhere on Earth, 2022. </i>
 </body>
 </html>
