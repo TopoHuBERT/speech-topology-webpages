@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="keywords" content="Page-specific keywords">
+	<title>RTD example - TopoHuBERT</title>
+	<link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="appendix-styles.css">
+</head>
+
+<body>
+  <nav class="main-nav__links">
+    <ul>
+      <li>
+        <a href="../index.html#home">Home</a>
+      </li>
+      <li>
+	<a href="../index.html#repository">Paper and Code</a>
+      </li>
+      <li>
+	<a href="../index.html#appendix"> Appendices</a> 
+        <ul>
+          <li><a href="../appendix/A.html">A. Separation of single models</a> </li>
+          <li><a href="../appendix/B.html">B. Separation of a pair of speakers</a> </li>
+          <li><a href="../appendix/C.html">C. Attention meets Power Spectrum</a> </li>
+          <li><a href="../appendix/D.html">D. Separation of a pair of emotions</a> </li>
+         </ul>
+      </li>
+      <li>
+	<a href="../index.html#tda">TDA FAQ</a>
+        <ul>
+          <li><a href="../tda/rtd_example.html">An example of RTD computation</a>  </li>
+        </ul>
+       </li>
+       <li>
+         <a href="../index.html#contacts">Contact us</a>
+       </li>
+     </ul>
+  </nav>
+<div class="outer-border"><div class="inner-border">
+<div class="appendix-header">
+  <div class="container">
+     <h1> Computation of Representation Topology Divergence (RTD)  </h1>
+     <h3> An example  </h3>
+  </div>
+</div>
+
+<div class="appendix-body">
+  <div class="container">
+    <table class="noborder">
+       <tr class="noborder">
+           <td class="noborder"> <b> 1) </b></td>
+           <td width=40%  class="noborder">
+           <p class="p-first-line">Let's consider the following graphs G<sub>a</sub> and G<sub>b</sub></p>
+           </td>
+           <td class="noborder"; >
+             <div class="image-wrapper">
+               <img src="data/rtd-01/graph-a-01.png"; height=80%; alt="Image is not available" >
+             </div>
+           </td>
+           <td class="noborder"> 
+             <div class="image-wrapper">
+               <img src="data/rtd-01/graph-b-01.png"; max-height=150px; alt="Image is not available" >
+             </div>
+           </td>
+        </tr>
+       <tr class="noborder">
+           <td class="noborder"> <b> 2) </b></td>
+           <td width=40%; class="noborder">
+ <p class="main-text-p">Corresponding H<sub>0</sub> diagrams (built by Ripser++ package) look in the following way </br> </br> <i>Note that Ripser doesn't draw infinity H<sub>0</sub> bar, this is why the number of bars is less than the number of the connected components by one. </i></p>
+           </td>
+           <td class="noborder">
+             <div class="image-wrapper">
+               <img src="data/rtd-01/barcode-a-01.png"; height=80%; alt="Image is not available" >
+             </div>
+           </td>
+           <td class="noborder"> 
+             <div class="image-wrapper">
+               <img src="data/rtd-01/barcode-b-01.png"; max-height=150px; alt="Image is not available" >
+             </div>
+           </td>
+        </tr>
+      </table>
+      <table class="noborder">
+       <tr class="noborder">
+           <td class="noborder"> <b> 3) </b></td>
+           <td width=60%; class="noborder">
+ <p class="main-text-p">Now, let's calculate RTD between graphs G<sup>a</sup> and G<sup>b</sup>. At first, let's construct graph G<sup>ab</sup> from the graphs G<sup>a</sup> and G<sup>b</sup>, as described in the papers <a href="https://arxiv.org/abs/2205.09630">(Cherniavskii et al., 2022)</a> and <a href="https://arxiv.org/abs/2201.00058">(Barannikov et al., 2022)</a>.
+By definition the vertex set of this graph is the union of the vertices of graphs G<sup>a</sup> and G<sup>b</sup>.
+The weights of the edges are defined per formula </p>
+           </td>
+           <td class="noborder">
+             <div class="image-wrapper">
+               <img src="data/rtd-01/rtd-formula.png"; height=80%; alt="RTD formula" >
+             </div>
+           </td>
+        </tr> 
+
+       <tr class="noborder">
+           <td class="noborder"> <b> 4) </b></td>
+           <td width=40%; class="noborder">
+             <p class="p-first-line">As the result, we get the following graph G<sup>ab</sup></p>
+           </td>
+           <td class="noborder">
+             <div class="image-wrapper">
+               <img src="data/rtd-01/graph-ab-00.png"; height=250; alt="graph G^{ab}" >
+             </div>
+           </td>
+        </tr> 
+       <tr class="noborder">
+           <td class="noborder"> <b> 5) </b></td>
+           <td width=40%; class="noborder">
+             <p class="main-text-p">Note that by definition, all edges between the nodes, corresponding to G<sup>a</sup> graph (denoted as v1, v2, v3) and between nodes with the same indices have zero weights; all edges between the nodes, corresponding to G<sup>b</sup> 
+graph (u1, u2, u3) have the same weight as they had in G<sup>b</sup> graph; all other edges have weight 0.5 because when we get a maximum of two edges - one from graph G<sup>a</sup> and one from graph G<sup>b</sup>, we always get this value.
+
+H<sub>1</sub> barcode of this new graph, calculated with Ripser++, looks in the following way</p>
+           </td>
+           <td class="noborder">
+             <div class="image-wrapper">
+               <img src="data/rtd-01/barcode-ab-00.png"; height=80%; alt="H1-barcode for RTD(A,B)" >
+             </div>
+           </td>
+        </tr> 
+       <tr class="noborder">
+           <td class="noborder"> <b> 6) </b></td>
+           <td colspan="2"; class="noborder">
+              <p class="p-first-line">Now we can calculate RTD(G<sup>a</sup>, G<sup>b</sup>) as the sum of the bars of this barcode, that is equal to 0.7.</p>
+           </td>
+        </tr> 
+    </table>
+    </br>
+    <hr>
+    </br>
+    <p style="text-align:center"> <b>Now let us explain why does H<sub>1</sub> barcode for this graph look as it looks. </b></p>
+    <table class="noborder">
+       <tr class="noborder">
+           <td width=20%; class="noborder"> &nbsp; </td>
+           <td width=40%; class="noborder"> &nbsp; </td>
+           <td width=40%; class="noborder"> &nbsp; </td>
+       </tr>
+       <tr class="noborder">
+           <td class="noborder"; >
+             <div class="image-wrapper">
+               <img src="data/rtd-01/graph-ab-01.png"; height=50%; alt="Image is not available" >
+             </div>
+           </td>
+           <td colspan="2"; class="noborder">
+              <p class="main-text-p">To make it more clear, we will now represent weights of G<sup>ab</sup> visually, using colors. The darkest edges have the mimimum weight, equal to 0, and the lightest ones have the maximum weight, equal to 0.5.</p>
+           </td>
+        </tr>
+       <tr class="noborder">
+         <td class="noborder">&nbsp</td><td class="noborder">&nbsp</td><td class="noborder">&nbsp</td>
+       </tr>
+       <tr class="noborder">
+         <td class="noborder">
+             <div class="image-wrapper">
+               <img src="data/rtd-01/graph-ab-02.png"; height=60%; alt="Image is not available" >
+             </div>
+           </td>
+           <td colspan="2";  class="noborder">
+              <p class="main-text-p"> Let's now see, what will happen, if we will take into account only edges with weight less than 0.1 (in other words, if we filter our graph by some threshold 0 < &epsilon; < 0.1).
+Also recall that, strictly speaking, we calculate a barcode not from the graph G<sup>ab</sup> itself, but from the slightly bigger constructions, called a flag complexes, associated with the graph on every threshold &epsilon;. To construct a flag complex upon our graph for the current threshold &epsilon;, we do the following: we span a simplex (triangle, tetrahedron etc) on those vertices, which form a clique for the current &epsilon;. Since edges (v1, v2), (v2, v3) and (v3, v1) have zero weights, they remain in our construction for every &epsilon; > 0, and thus they always form a clique, which we fill in with a triangle.
+              </p> <p class="main-text-p"> There are no cycles in this complex, so, using the language of algebraic topology, we say that H<sub>1</sub> homology group is trivial for &epsilon; < 0.1. Thus there is no bars between these values.</p>
+           </td>
+        </tr>
+       <tr class="noborder">
+         <td class="noborder">&nbsp</td><td class="noborder">&nbsp</td><td class="noborder">&nbsp</td>
+       </tr>
+       <tr class="noborder">
+           <td class="noborder"; >
+             <div class="image-wrapper">
+               <img src="data/rtd-01/graph-ab-03.png"; height=60%; alt="Image is not available" >
+             </div>
+           </td>
+           <td colspan="2"; class="noborder">
+              <p class="main-text-p"> For 0.1 ≤ &epsilon; < 0.2 we include an edge with the weight 0.1 and get such picture. 
+              There is one cycle. Algebraic topologists experss it by saying that H<sub>1</sub> homology group is one dimensional for 0.1 ≤ &epsilon; < 0.2. It is illustrated by the lower bar on the barcode, which starts at &epsilon; = 0.1.
+              </p>
+           </td>
+       </tr>
+       <tr class="noborder">
+         <td class="noborder">&nbsp</td><td class="noborder">&nbsp</td><td class="noborder">&nbsp</td>
+       </tr>
+       <tr class="noborder">
+         <td class="noborder">
+             <div class="image-wrapper">
+               <img src="data/rtd-01/graph-ab-04.png"; height=60%; alt="Image is not available" >
+             </div>
+           </td>
+           <td colspan="2";  class="noborder">
+              <p class="main-text-p"> Now let's see what happens for 0.2 ≤ &epsilon; < 0.3, when we add one more edge. One more cycle appears, so we start one more bar from the point 0.2. In the same time, the previous cycle still persists, so the previous bar also continues. H<sub>1</sub> homology group is now two dimensional.
+              </p>
+           </td>
+      </tr>
+       <tr class="noborder">
+         <td class="noborder">&nbsp</td><td class="noborder">&nbsp</td><td class="noborder">&nbsp</td>
+       </tr>
+      <tr class="noborder">
+           <td class="noborder">
+             <div class="image-wrapper">
+               <img src="data/rtd-01/graph-ab-05.png"; height=60%; alt="Image is not available" >
+             </div>
+           </td>
+           <td colspan="2"; class="noborder">
+              <p class="main-text-p"> An interesting thing happens when we add the edge with the weight 0.3. At first, the lower three vertices now also form a clique, so we add a new triangle. At second, a new loop appear, but we don't count it for a barcode, because it can be represented as a sum of the two other loops. Thus, formally speaking, H<sub>1</sub> remains two dimensional, and we further continue two bars. </p>
+           </td>
+       </tr>
+       <tr class="noborder">
+         <td class="noborder">&nbsp</td><td class="noborder">&nbsp</td><td class="noborder">&nbsp</td>
+       </tr>
+       <tr class="noborder">
+         <td class="noborder">
+             <div class="image-wrapper">
+               <img src="data/rtd-01/graph-ab-06.png"; height=60%; alt="Image is not available" >
+             </div>
+           </td>
+           <td colspan="2";  class="noborder">
+              <p class="main-text-p"> Finally, when we reach the threshold 0.5, all edges appear in the graph, and it all turn into one big clique. In the corresponding flag complex, all cycles dissapear.
+              Thus all bars end on the point 0.5. The clique is actually filled in with the multi-dimensional simplex, but we drew it's two dimensional projection for clarity. </p>
+           </td>
+        </tr>
+      </table>
+  </div>
+  </div></div>
+</div>
+
+<p> &nbsp </p>
+<i>Designed in Notepad and hosted by Github. (C) Unnameable authors, somewhere on Earth, 2022. </i>
+</body>
+</html>

@@ -1,0 +1,108 @@
+.appendix-header {
+    padding-top: 50px;
+    width: 99%;
+    margin: 0 0;
+    clear: both;
+    text-align: center;
+}
+
+.appendix-header h1 {
+    position: relative;
+    font-weight: 200;
+    font-size: 35px;
+}
+
+.appendix-header h3 {
+    position: relative;
+    font-size: 20px;
+}
+
+.appendix-body {
+    width: 98%;
+}
+
+.main-text-p {
+    text-indent: 0em;   
+    text-align: justify;
+    display: inline-block;
+    margin-left: 2em;
+}
+
+.p-first-line {
+    width: 100%;
+    text-indent: 0em;
+    text-align: left;
+    display: inline-block;
+    margin-left: 2em;
+}
+
+.image-wrapper {
+    width: 100%;
+}
+
+.image-wrapper img{
+    top: 0;
+    right: 0;
+    left: 0;
+
+    display: block;
+    max-width: 100%;
+    max-height: 400pt;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.image-wrapper super-caption, .image-wrapper sub-caption {
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.super-caption h4 {
+   margin-botton: 0pt;
+   margin-top: 0pt;
+}
+
+.sub-caption p {
+    margin-top: 6pt;
+    margin-bottom: 6pt;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.super-caption p {
+    margin-top: 12pt;
+    margin-bottom: 6pt;
+}
+
+table {
+   width:100%;
+   border: 1px solid rgb(49, 97, 62);
+   border-collapse: collapse;
+}
+
+th, td {
+  text-align: center;
+  border: 1px solid rgb(49, 97, 62);
+}
+
+.noborder {
+   text-align: center;
+   border: 0px solid rgb(49, 97, 62);
+   border-collapse: collapse;
+}
+
+.appendix-body ul {
+   margin-top: 0px;
+   margin-bottom: 0px;
+}
+
+.table-text {
+    text-indent: 0px;
+    text-align: left;
+}
