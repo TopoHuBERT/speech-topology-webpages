@@ -10,32 +10,35 @@
 </head>
 
 <body>
-  <header class="nav-header">
-    <div class="main-nav">
-       <div class="container">
-         <nav class="main-nav__links">
-	   <ul>
-	     <li>
- 	       <a href="#home">TopoHuBERT</a>
-	     </li>
-	     <li>
- 	       <a href="#repository">Paper and Code</a>
-	     </li>
-	     <li>
-	       <a href="#appendix">Appendices</a>
-	     </li>
-	     <li>
-	       <a href="#tda">TDA FAQ</a>
-	     </li>
-	     <li>
-	       <a href="#contacts">Contact us</a>
-	     </li>
-           </ul>
-         </nav>
-       </div>
-  </div>
-</header>
-
+  <nav class="main-nav__links">
+    <ul>
+      <li>
+        <a href="#home">TopoHuBERT</a>
+      </li>
+      <li>
+	<a href="#repository">Paper and Code</a>
+      </li>
+      <li>
+	<a href="#appendix"> Appendices</a> 
+        <ul>
+          <li><a href="appendix/A.html">A. Separation of single models</a> </li>
+          <li><a href="appendix/B.html">B. Separation of a pair of speakers</a> </li>
+          <li><a href="appendix/C.html">C. Attention meets Power Spectrum</a> </li>
+          <li><a href="appendix/D.html">D. Separation of a pair of emotions</a> </li>
+         </ul>
+      </li>
+      <li>
+	<a href="#tda">TDA FAQ</a>
+        <ul>
+          <li><a href="tda/rtd_example.html">An example of RTD computation</a>  </li>
+        </ul>
+       </li>
+       <li>
+         <a href="#contacts">Contact us</a>
+       </li>
+     </ul>
+  </nav>
+<div class="outer-border"><div class="inner-border">
 <section class="home-section" id="home">
   <div class="container">
     <header class="home-section__header">
@@ -63,27 +66,29 @@ but here we can present them in their enterietry without any fear for page count
       <header class="paper-section__header">
           <h2> Article and Source Code </h2>
       </header>
-      <div class="grid-container">
-	<ul class="linkcolumn">
-	  <img src="pics/article.png" alt="scripted paper"> 
-	</ul>
-        <ul class="linkcolumn paper-column">
-          <li class="list-element">
-            <h4> Our article  </h4>
-            <i> Article "Topological properties of attention for speech processing" is currently under review. When it is published, here will be a link to it. </i>
-          </li>
-        </ul>
-	<ul class="linkcolumn">
-	  <img src="pics/github-logo.png" alt="Github logo"> 
-	</ul>
-        <ul class="linkcolumn repo-column">
-          <li class="list-element">
-            <h4> Our repository  </h4>
-            <p> Repository with code that allows to reproduce experiments from our paper or try them on a completely new task or dataset is available at ...&nbsp. </p>
-            <i> Right now it is under constuction</i>
-          </li>
-        </ul>
-      </div>
+      <table class="noborder">
+          <tr class="noborder">
+             <td class="noborder"; width=10%>
+                <img src="pics/article.png";  width=100%; alt="scripted paper"> 
+             </td>
+             <td class="noborder"; width=1.5%> &nbsp; </td>
+             <td class="noborder"; width=36%>
+               <h4> Our article  </h4>
+               <i> Article "Topological properties of attention for speech processing" is currently under review. When it is published, here will be a link to it. </i>
+             </td> 
+             <td class="noborder"; width=5%> &nbsp; </td>
+             <td class="noborder"; width=14%>
+               <img src="pics/github-logo.png";  width=100%;  alt="Github logo"> 
+             </td>
+             <td class="noborder"; width=1.5%> &nbsp; </td>
+             <td class="noborder"; width=32%> 
+               <h4> Our repository  </h4>
+               <p> Repository with code that allows to reproduce experiments from our paper or try them on a completely new task or dataset is available at ...&nbsp. </p>
+               <i> Right now it is under constuction</i>
+             </td>
+          </tr>
+      </table>
+      <p> &nbsp; </p>
       <h4 align="center"> Used datasets </h4>
       <p> In our work we used several publicaly available datasets. Here we would like to thank authors of the datasers and provide quick links to the websites of those projects.
       </p>
@@ -93,7 +98,6 @@ but here we can present them in their enterietry without any fear for page count
          <li><b>IEMOCAP </b> available at <a href="https://sail.usc.edu/iemocap/"> sail.usc.edu/iemocap</a>. We used it according to the <a href="https://arxiv.org/pdf/2105.01051.pdf">procedures</a> implemented in <a href="https://superbbenchmark.org/">SUPERB</a> benchmark. </li>
          <li><b>VoxCeleb1</b> available at <a href="https://www.robots.ox.ac.uk/~vgg/data/voxceleb/">www.robots.ox.ac.uk/~vgg/data/voxceleb/</a>. We used it according to the procedures implemented in SUPERB benchmark. </li>
       </ul>
-  <p>&nbsp</p>
   </div>
 </section>
 
@@ -103,8 +107,8 @@ but here we can present them in their enterietry without any fear for page count
         <h2> Appendices and Supplementary Material </h2>
       </header>
     <div class="appnd-info">
-    <p> We tried many different approaches to study the topology &#8212; and not only it &#8212; of attention maps of HuBERT model and performed various experiments, but due to the tight size constraints were unable to put them all into our paper.
-This section presents compilation of paragraphs, maps and charts that didn't fit into the article or (in a different circumstances) would made its appendix. </p>
+    <p> We used several approaches to studying the topology and spectral properties of attention maps of HuBERT model and performed various experiments, but due to the tight size constraints were unable to put them all into our paper.
+This section presents compilation of paragraphs, maps and charts that didn't fit into the article or (in a different circumstances) would make its appendix. </p>
     <ul>
       <li> <a href="appendix/A.html">Appendix A. Separation of single models</a>,  where we show that (if we know which Spoofing model is playing against us) a single HuBERT head is often enough to sucessfully detect synthetic speech.</li>
       <li> <a href="appendix/B.html">Appendix B. Separation of a pair of speakers</a>, where we show that from HuBERT perspective speech of (almost) any random pair of people differs very much, but if there are too many people those differences interfere into incomperehensible noise. </li>
@@ -126,18 +130,21 @@ This section presents compilation of paragraphs, maps and charts that didn't fit
   
   <div class="grid-container-tda">
     <figure class="tda-item">
-      <img src="pics/topo-1.png" width=200px alt="Image is not available">
+      <img src="pics/topo-1.png"; width=100%; max-width=200px; alt="Image is not available">
       <h4>TDA Glossary </h4>
       <p> Glossary of TDA terminology used in our paper and a brief introduction to Topological Data Analysis </p>
     </figure>
     <figure class="tda-item">
-      <img src="pics/topo-2.png" width=200px alt="Image is not available">
-      <h4>Topological features </h4>
-      <p> What are the features we used in our model? Are any of them more important the the others? And why did we use
-         <br> <i>l<sub>1</sub></i>&#8212;&nbsp;distance, but not <i>l<sub>2</sub></i>?  </p>
+      <img src="pics/topo-2.png"; width=100%; max-width=200px; alt="Image is not available">
+      <h4> Introduction to TDA </h4>
+      <p> Here we will provide some examples of implementation of different TDA methods used in our work.</p>
+      <p> </br> 1) Computing topological features of an attention matrix (<i>Coming soon</i>) </br>
+      <a href="tda/rtd_example.html"> 2) Computing the RTD </a> </br>
+      3) <i>Coming soon</i> 
+      </p>
     </figure>
     <figure class="tda-item">
-      <img src="pics/topo-3.png" width=200px alt="Image is not available">
+      <img src="pics/topo-3.png"; width=100%; max-width=200px; alt="Image is not available">
       <h4> TDA for Transformers </h4>
       <p> This research is not the first nor the last (hopefully) to implement methods of TDA to transformer models. 
 Here <i>will be</i> a brief overview of previous works in the field that influenced our studies.</p>
@@ -153,13 +160,16 @@ Here <i>will be</i> a brief overview of previous works in the field that influen
       <h2> Contact information </h2>
     </header>
     <div class="contact-info">
-        <i> To preserve anonymity of the submission we can not disclose our identitites yet. After our article is published we will update this section. </i>
-	<p> Right now you can contact us via e-mail at &nbsp <a class="email" href="mailto:topohubert@yahoo.com"> topohubert@yahoo.com </a> </p>
+        <p> &nbsp &nbsp &nbsp  We are the research team behind the article "Topological properties of attention for speech processing" and this webpage: </br><i> Eduard Tulchinskii, Kristian Kuznetsov, Laida Kushnareva, Daniil Cherniavskii,
+Serguei Barannikov, Irina Piontkovskaya, Sergey Nikolenko, and Evgeny Burnaev.</i></p>
+	<p> Right now you can contact us via e-mail at &nbsp <a class="email" href="oa0188594@gmail.com"> oa0188594@gmail.com </a> </p>
     </div>
   </div>
 </section>
-
 <p> &nbsp </p>
-<i>Created in Notepad and hosted by Github. (C) Unnameable authors, somewhere on Earth, 2022. </i>
+</div></div>
+
+
+<i>Designed in Notepad and hosted by Github. (C) Unnameable authors, somewhere on Earth, 2022. </i>
 </body>
 </html>

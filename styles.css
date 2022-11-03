@@ -1,6 +1,6 @@
 html, body {
     background-color: rgb(252, 254, 243);
-    width: 100%;
+    width: 99%;
     height: 100%;
     color: #2c3e50;
     font-family: "Open Sans",Tahoma,Verdana,Arial,sans-serif;
@@ -14,7 +14,7 @@ html, body {
     border-bottom: 10px solid rgb(62, 160, 105);
 }
 
-div, menu, nav, section {
+div, section {
     display: block;
 }
 
@@ -42,7 +42,7 @@ div, menu, nav, section {
 
 .container {
     position:relative;
-    max-width:1200px;
+    max-width:80%;
     margin:0 auto;
 }
 
@@ -53,71 +53,88 @@ div, menu, nav, section {
     height:0;
 }
 
-.nav-header {
-    position:fixed;
-    z-index:100;
-    width:100%;
-}
-
-.main-nav {
-    position:absolute;
-    z-index:200;
-    top:0;
-    left:0;
-    height:40px;
-    overflow:hidden;
-    background-color:rgb(62, 160, 105);
-    width:100%;
-    margin:0 0;
-    clear:both;
-    border-left: 2px solid rgb(49, 97, 62);
-    border-top: 1px solid rgb(49, 97, 62);
-    border-bottom: 2px solid rgb(49, 97, 62);
-}
-
-.main-nav:before, .main-nav:after {
+.main-nav__links:before, .main-nav__links:after {
     display:block;
     content:"";
     clear:both;
-    height:0;
 }
 
-.main-nav__links { 
-    float:left;
-    width:85%;
-    width:calc(95% - 40px);
-    margin-left:1%;
-    margin-right:1%;
-    margin-left:calc(20px);
-    margin-right:calc(20px);
-    height:auto;
-    margin-top:-15px;
-    margin-bottom:10px;
+.main-nav__links {
+    display:block;
+    z-index:200;
+ 
+
+    border-left: 2px solid rgb(49, 97, 62);
+    border-top: 1px solid rgb(49, 97, 62);
+    border-bottom: 2px solid rgb(49, 97, 62);
+    background-color:rgb(62, 160, 105);
+    
+    position:fixed;
+
+    padding-left:10%;
+    margin-left:0.5%;
+    width:99%;
+    left:0;
 }
 
-.main-nav__links li {
-    display:inline-block;
-    margin-top: 0px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
+.main-nav__links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.main-nav__links ul li {
+    margin: 0;
+    display: inline-block;
+    list-style-type: none;
+    transition: all 0.2s;
 }
 
-nav ol, nav ul {
-    list-style: none
-}
-
-.main-nav__links a {
+.main-nav__links > ul > li > a {
     color:#fff;
     font-family:Georgia,Times,"Times New Roman",serif;
     font-style:italic;
-    line-height:40px;
+    font-size: 1.2rem;
     border-color:#fff;
     -webkit-transition:color .5s;
     -o-transition:color .5s;
     transition:color .5s;
+
+    display: inline-block;
+    line-height: 1.25em;
+    padding: 0.3em 1.5em;
 }
 
+.main-nav__links li > ul{
+    display : none;
+    margin-top: 1px;
+    background-color: rgb(51, 130, 85);
+}
+
+.main-nav__links li > ul li {
+    display: block;
+    border: 1px solid rgb(49, 97, 62);
+}
+
+.main-nav__links li > ul li a {
+    color: #fff;
+    display: block;
+    line-height: 2em;
+    padding: 0.5em 2em;
+    text-decoration: none;
+}
+
+.main-nav__links li:hover {
+    background-color: rgb(44, 89, 56);
+}
+
+.main-nav__links a:hover {
+    color: orange;
+}
+
+.main-nav__links li:hover > ul{
+    position: absolute;
+    display : block;
+}
 
 .intro {
     float: left;
@@ -178,9 +195,9 @@ nav ol, nav ul {
 }
 
 .contacts-section {
-    margin-left: 20%;
+    margin-left: 15%;
     padding-top: 50px; 
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -301,56 +318,6 @@ nav ol, nav ul {
     background-color: rgb(49, 97, 62);
 }
 
-.grid-container {
-    display:grid;
-    grid-template-columns: 1fr 4fr 1fr 4fr;
-    width:100%;
-    margin: 0 0;
-    clear: both;
-}
-
-.linkcolumn {
-    list-style-type: none;
-    float: left;
-    width: calc(80% - 10px);
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left:5px;
-    margin-right:5px;
-    height: auto;
-}
-
-.linkcolumn img {
-   display: block;
-   margin-left: 2%;
-   margin-right: 5%;
-   margin-top: 10%;
-   max-width: 120px;
-   max-height: 120px;
-   float: left;
-}
-
-.list-element p {
-    text-align: justify;
-    display: inline-block;
-    width: 90%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    font-weight: lighter;
-    font-size: 16px;
-}
-
-.paper-section p, .appnd-section p {
-    text-align: justify;
-    display: inline-block;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-weight: lighter;
-    font-size: 16px;
-    text-indent:5%;
-}
 
 .appnd-section {
     padding-bottom: 20px;
@@ -415,13 +382,14 @@ nav ol, nav ul {
     right: 0;
     left: 0;
     display: block;
+    width=100%;
     max-width: 200px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 25px;
 }
 
-.list-element h4 {
+.list-element h4, table h4 {
     position: relative;
     font-weight: 400;
     font-size:18pt;
@@ -443,4 +411,49 @@ nav ol, nav ul {
 .appnd-section li {
     margin-bottom 4px;
     margin-top: 3px;
+}
+
+.supsub {
+    display: inline-block;
+}
+
+.supsub sup,
+.supsub sub {
+    position: relative;
+    display: block;
+    font-size: .6em;
+    line-height: 0.8;
+    text-indent: 3pt;
+}
+
+.supsub sub {
+    top: .3em;
+}
+
+.outer-border {
+    margin-left: 10px;
+    padding: 4px;
+    border: solid 4px rgb(129, 166, 139);
+}
+
+.inner-border {
+    padding: 20px;
+    border: solid 2px rgb(129, 166, 139);
+}
+
+hr {
+    border: solid 1px rgb(49, 97, 62);
+}
+
+.noborder {
+   text-align: justify;
+   border: 0px solid rgb(49, 97, 62);
+   border-collapse: collapse;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    max-width:90%;
+  }
 }
