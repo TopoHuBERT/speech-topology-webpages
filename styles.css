@@ -133,7 +133,7 @@ div, section {
 
 .main-nav__links li:hover > ul{
     position: absolute;
-    display : block;
+    display: block;
 }
 
 .intro {
@@ -382,7 +382,7 @@ div, section {
     right: 0;
     left: 0;
     display: block;
-    width=100%;
+    width: 100%;
     max-width: 200px;
     margin-left: auto;
     margin-right: auto;
