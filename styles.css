@@ -451,6 +451,9 @@ hr {
    border-collapse: collapse;
 }
 
+.tda-item h4 a {
+    text-decoration: none;
+}
 
 @media only screen and (max-width: 1000px) {
   .container {
