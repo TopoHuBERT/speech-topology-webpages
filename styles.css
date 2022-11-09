@@ -456,4 +456,8 @@ hr {
   .container {
     max-width:95%;
   }
+    
+  p {
+      font-size:12pt;
+  }
 }
