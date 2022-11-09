@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="keywords" content="Page-specific keywords">
+	<title>TDA Glossary - TopoHuBERT</title>
+	<link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="appendix-styles.css">
+</head>
+
+<body>
+  <nav class="main-nav__links">
+    <ul>
+      <li>
+        <a href="../index.html#home">Home</a>
+      </li>
+      <li>
+	<a href="../index.html#repository">Paper and Code</a>
+      </li>
+      <li>
+	<a href="../index.html#appendix"> Appendices</a> 
+        <ul>
+          <li><a href="../appendix/A.html">A. Separation of single models</a> </li>
+          <li><a href="../appendix/B.html">B. Separation of a pair of speakers</a> </li>
+          <li><a href="../appendix/C.html">C. Attention meets Power Spectrum</a> </li>
+          <li><a href="../appendix/D.html">D. Separation of a pair of emotions</a> </li>
+         </ul>
+      </li>
+      <li>
+	<a href="../index.html#tda">TDA FAQ</a>
+        <ul>
+          <li><a href="../tda/rtd_example.html">An example of RTD computation</a>  </li>
+        </ul>
+       </li>
+       <li>
+         <a href="../index.html#contacts">Contact us</a>
+       </li>
+     </ul>
+  </nav>
+<div class="outer-border"><div class="inner-border">
+<div class="appendix-header">
+  <div class="container">
+     <h1> TDA Glossary  </h1>
+     <h3> &nbsp;  </h3>
+  </div>
+</div>
+
+<div class="appendix-body">
+  <div class="container">
+   <dl>
+     <dt>Attention graph    </dt> <dd> We can treat each Transformer's attention matrix <i>A<sub>attn</sub></i> as an adjacency matrix of some weighted graph, where the vertices
+represent tokens, and the edges connect pairs of tokens with mutual attention weights. In our current work, we additionally transform this matrix by
+the following formula: <i>A'</i> = 1 - <i>max(A<span class="supsub"><sup></sup><sub>attn</sub></span> ,  A<span class="supsub"><sup>T</sup><sub>attn</sub></span> )</i>, making it symmetric. Further, we consider weighted undirected graph <i>G</i>,
+which corresponds to this new matrix <i>A'</i>. </dd>
+
+     <dt> Attention graph filtration </dt> <dd>Attention graph filtration is an ordered set of graphs <i>G<sup>&tau;<sub>i</sub></sup></i> filtered by increasing attention weight thresholds <i>&tau;<sub>i</sub></i>. 
+Filtering edges lower than the given threshold affects the graph structure and its core features. </br>
+To see how it happens, look at a little toy example below. When we filter out edges with weights 0.1, two cycles disappear. When we additionally filter out the
+edge with weight 0.2, one vertex becomes isolated, and thus new connected component appears. <p>
+Alternatively, we can filter out the edges with the weights, bigger than the threshold <i>&tau;<sub>i</sub></i>. In this variant of the filtration, if we'll increase <i>&tau;<sub>i</sub></i>, new edges will appear, while connected components will disappear.
+</p></dd>
+
+   <dt>Betti numbers </dt> <dd> We consider &beta;<sub>0</sub> (the number of connected components of the graph) and &beta;<sub>1</sub> (the number of independent cycles of the graph) as the
+core features of the attention graphs. More formally and generally these numbers are defined as dimensions of the 0-th and 1-st homology groups of the graph 
+(or associated complex) correspondingly.
+<p>
+Refer to Chapter 2 of the <a href="https://pi.math.cornell.edu/~hatcher/AT/AT.pdf">Algebraic Topology</a> textbook from Allen Hatcher for a more detailed introduction to homology groups.</p> </dd>
+   
+  <dt> Barcode </dt> <dd>
+TDA techniques allow tracking changes, happening through filtration, by identifying the moments of when the features appear (i.e., their "<i>birth</i>") or disappear
+ (i.e., their "<i>death</i>"), and associating a lifetime to them. The latter is encoded as a set of intervals called a "<i>barcode</i>", where each interval ("<i>bar</i>") 
+lasts from the feature's "birth" to its "death". The barcode characterizes the persistent features of attention graphs and describes their stability.
+<p>
+You can find a brief explanation of this concept in <a href="https://www.youtube.com/watch?v=h0bnG1Wavag">this introductory video</a>.
+Also, refer
+to the paper <a href="https://www.ams.org/journals/bull/2009-46-02/S0273-0979-09-01249-X/S0273-0979-09-01249-X.pdf">Topology And Data</a> by Gunnar Carlsson for more formal and precise definitions.
+</p></dd>  
+ 
+</dl>
+   </div>
+</div>
+
+</div></div>
+
+<p> &nbsp </p>
+<i>Designed in Notepad and hosted by Github. (C) Eduard Tulchinskii et.al., 2022. </i>
+</body>
+</html>
