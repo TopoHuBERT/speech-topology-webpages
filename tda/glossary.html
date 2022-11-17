@@ -53,12 +53,12 @@
 <div class="appendix-body">
   <div class="container">
    <dl>
-     <dt>Attention graph    </dt> <dd> We can treat each Transformer's attention matrix <i>A<sub>attn</sub></i> as an adjacency matrix of some weighted graph, where the vertices
+	   <dt><b>Attention graph</b></dt> <dd> We can treat each Transformer's attention matrix <i>A<sub>attn</sub></i> as an adjacency matrix of some weighted graph, where the vertices
 represent tokens, and the edges connect pairs of tokens with mutual attention weights. In our current work, we additionally transform this matrix by
 the following formula: <i>A'</i> = 1 - <i>max(A<span class="supsub"><sup></sup><sub>attn</sub></span> ,  A<span class="supsub"><sup>T</sup><sub>attn</sub></span> )</i>, making it symmetric. Further, we consider weighted undirected graph <i>G</i>,
 which corresponds to this new matrix <i>A'</i>. </dd>
 
-     <dt> Attention graph filtration </dt> <dd>Attention graph filtration is an ordered set of graphs <i>G<sup>&tau;<sub>i</sub></sup></i> filtered by increasing attention weight thresholds <i>&tau;<sub>i</sub></i>. 
+	   <dt><b> Attention graph filtration </b> </dt> <dd>Attention graph filtration is an ordered set of graphs <i>G<sup>&tau;<sub>i</sub></sup></i> filtered by increasing attention weight thresholds <i>&tau;<sub>i</sub></i>. 
 Filtering edges lower than the given threshold affects the graph structure and its core features. </br>
 To see how it happens, look at a little toy example below. When we filter out edges with weights 0.1, two cycles disappear. When we additionally filter out the
 edge with weight 0.2, one vertex becomes isolated, and thus new connected component appears. 
@@ -108,13 +108,13 @@ But when we increase <i>&tau;<sub>i</sub></i> to 0.2, only one connected compone
 <p>Both types of the graph filtration can be used to build the <i>barcode</i>.</p>
 </dd>
 
-   <dt>Betti numbers </dt> <dd> We consider &beta;<sub>0</sub> (the number of connected components of the graph) and &beta;<sub>1</sub> (the number of independent cycles of the graph) as the
+	<dt><b>Betti numbers</b></dt> <dd> We consider &beta;<sub>0</sub> (the number of connected components of the graph) and &beta;<sub>1</sub> (the number of independent cycles of the graph) as the
 core features of the attention graphs. More formally and generally these numbers are defined as dimensions of the 0-th and 1-st homology groups of the graph 
 (or associated complex) correspondingly.
 <p>
 Refer to Chapter 2 of the <a href="https://pi.math.cornell.edu/~hatcher/AT/AT.pdf">Algebraic Topology</a> textbook from Allen Hatcher for a more detailed introduction to homology groups.</p> </dd>
    
-  <dt> Barcode </dt> <dd>
+	<dt><b>Barcode</b></dt> <dd>
 TDA techniques allow tracking changes, happening through filtration, by identifying the moments of when the features appear (i.e., their "<i>birth</i>") or disappear
  (i.e., their "<i>death</i>"), and associating a lifetime to them. The latter is encoded as a set of intervals called a "<i>barcode</i>", where each interval ("<i>bar</i>") 
 lasts from the feature's "birth" to its "death". The barcode characterizes the persistent features of attention graphs and describes their stability.
