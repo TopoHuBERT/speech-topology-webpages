@@ -31,7 +31,10 @@
       <li>
 	<a href="../index.html#tda">TDA FAQ</a>
         <ul>
+          <li><a href="../tda/glossary.html">TDA Glossary</a>  </li>
+          <li><a href="../tda/example_01.html">Computing topological features</a>  </li>
           <li><a href="../tda/rtd_example.html">An example of RTD computation</a>  </li>
+          <li><a href="../tda/tdaformers.html">TDA for transformers</a>  </li>
         </ul>
        </li>
        <li>
@@ -43,7 +46,7 @@
 <div class="appendix-header">
   <div class="container">
      <h1> Computation of Representation Topology Divergence (RTD)  </h1>
-     <h3> An example  </h3>
+     <h3> Example #1 </h3>
   </div>
 </div>
 
@@ -53,7 +56,7 @@
        <tr class="noborder">
            <td class="noborder"> <b> 1) </b></td>
            <td width=40%  class="noborder">
-           <p class="p-first-line">Let's consider the following graphs G<sub>a</sub> and G<sub>b</sub></p>
+           <p class="p-first-line">Let's consider the following graphs G<sup>a</sup> and G<sup>b</sup></p>
            </td>
            <td class="noborder"; >
              <div class="image-wrapper">
@@ -222,11 +225,95 @@ Also recall that, strictly speaking, we calculate a barcode not from the graph G
            </td>
         </tr>
       </table>
+<p>&nbsp;</p>
   </div>
-  </div></div>
+  </div>
+
+<hr>
+<div class="appendix-header">
+  <div class="container">
+     <h3> Example #2 </h3>
+  </div>
 </div>
 
+<div class="appendix-body">
+  <div class="container">
+    <table class="noborder">
+       <tr class="noborder">
+           <td class="noborder"> <b> 1) </b></td>
+           <td width=40%  class="noborder">
+           <p class="p-first-line">Now let's calculate RTD between following two graphs </p>
+           </td>
+           <td class="noborder"; >
+             <div class="image-wrapper">
+               <img src="data/rtd-01/graph-a-11.png"; height=80%; alt="Graph A (example 2)" >
+             </div>
+           </td>
+           <td class="noborder"> 
+             <div class="image-wrapper">
+               <img src="data/rtd-01/graph-b-11.png"; max-height=150px; alt="Graph B (example 2)" >
+             </div>
+           </td>
+        </tr>
+      </table>
+      <table class="noborder">
+       <tr class="noborder">
+           <td class="noborder"> <b> 2) </b></td>
+           <td width=60%; class="noborder">
+               <p class="p-first-line">Here is how G<sup>ab</sup> looks like in this case:  </p>
+           </td>
+           <td class="noborder">
+             <div class="image-wrapper">
+               <img src="data/rtd-01/graph-ab-10.png"; height=250; alt="graph G^{ab}" >
+             </div>
+           </td>
+        </tr> 
+
+       <tr class="noborder">
+           <td class="noborder"> <b> 3) </b></td>
+           <td width=40%; class="noborder">
+             <p class="p-first-line"> H<sub>1</sub> barcode of this new graph, calculated with Ripser++, looks in the following way</p>
+           </td>
+           <td class="noborder">
+             <div class="image-wrapper">
+               <img src="data/rtd-01/barcode-ab-10.png"; height=80%; alt="H1-barcode for RTD(A,B), v2" >
+             </div>
+           </td>
+        </tr> 
+       <tr class="noborder">
+           <td class="noborder"> <b> 4) </b></td>
+           <td colspan="2"; class="noborder">
+              <p class="p-first-line">There is only one bar, so RTD(G<sup>a</sup>, G<sup>b</sup>) is equal to the length of this bar, which is 0.75.</p>
+           </td>
+        </tr> 
+    </table>
+    </br>
+    <hr>
+    </br>
+    <p style="text-align:center"><b>Now let us explain why does H<sub>1</sub> barcode for this graph look as it looks. </b></p>
+    <table class="noborder">
+       <tr class="noborder">
+           <td width=20%; class="noborder"> &nbsp; </td>
+           <td width=40%; class="noborder"> &nbsp; </td>
+           <td width=40%; class="noborder"> &nbsp; </td>
+       </tr>
+       <tr class="noborder">
+           <td class="noborder"; >
+             <div class="image-wrapper">
+               <img src="data/rtd-01/graph-ab-11.png"; height=50%; alt="Image is not available" >
+             </div>
+           </td>
+           <td colspan="2"; class="noborder">
+              <p class="main-text-p">To make it more clear, we will now represent weights of G<sup>ab</sup> visually, using colors. The darkest edges have the mimimum weight, equal to 0, and the lightest ones have the maximum weight, equal to 0.5.</p>
+           </td>
+        </tr>
+   </table>
+  </div>
+</div>
+
+</div></div>
+
 <p> &nbsp </p>
-<i>Designed in Notepad and hosted by Github. (C) Unnameable authors, somewhere on Earth, 2022. </i>
+<i>Designed in Notepad and hosted by Github. (C) TopoHuBERT team (Eduard Tulchinskii et.al.), 2022. </i>
 </body>
 </html>

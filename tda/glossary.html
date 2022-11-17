@@ -31,7 +31,10 @@
       <li>
 	<a href="../index.html#tda">TDA FAQ</a>
         <ul>
+          <li><a href="../tda/glossary.html">TDA Glossary</a>  </li>
+          <li><a href="../tda/example_01.html">Computing topological features</a>  </li>
           <li><a href="../tda/rtd_example.html">An example of RTD computation</a>  </li>
+          <li><a href="../tda/tdaformers.html">TDA for transformers</a>  </li>
         </ul>
        </li>
        <li>
@@ -58,9 +61,52 @@ which corresponds to this new matrix <i>A'</i>. </dd>
      <dt> Attention graph filtration </dt> <dd>Attention graph filtration is an ordered set of graphs <i>G<sup>&tau;<sub>i</sub></sup></i> filtered by increasing attention weight thresholds <i>&tau;<sub>i</sub></i>. 
 Filtering edges lower than the given threshold affects the graph structure and its core features. </br>
 To see how it happens, look at a little toy example below. When we filter out edges with weights 0.1, two cycles disappear. When we additionally filter out the
-edge with weight 0.2, one vertex becomes isolated, and thus new connected component appears. <p>
-Alternatively, we can filter out the edges with the weights, bigger than the threshold <i>&tau;<sub>i</sub></i>. In this variant of the filtration, if we'll increase <i>&tau;<sub>i</sub></i>, new edges will appear, while connected components will disappear.
-</p></dd>
+edge with weight 0.2, one vertex becomes isolated, and thus new connected component appears. 
+     <table class="noborder">
+        <tr class="noborder">
+          <td class="noborder">
+              <div class="image-wrapper">
+                  <img src="data/glossary/1.png" style="max-height:150px;" alt="Image not available"/>
+              </div>
+          </td>
+          <td class="noborder">
+              <div class="image-wrapper">
+                  <img src="data/glossary/2.png" style="max-height:150px;" alt="Image not available"/>
+              </div>
+          </td>
+          <td class="noborder">
+              <div class="image-wrapper">
+                  <img src="data/glossary/3.png" style="max-height:150px;" alt="Image not available"/>
+              </div>
+          </td>
+        </tr>
+     </table>
+<p>
+Alternatively, we can filter out the edges with weights larger than the threshold <i>&tau;<sub>i</sub></i>. In this variant of the filtration, new edges will appear, and connected 
+components will disappear while we increase <i>&tau;<sub>i</sub></i>. For example, when we cut off all edges with weights more than 0.1, there are two connected components. 
+But when we increase <i>&tau;<sub>i</sub></i> to 0.2, only one connected component remain. By increasing the threshold further, we get the initial graph again.
+</p>
+     <table class="noborder">
+        <tr class="noborder">
+          <td class="noborder">
+              <div class="image-wrapper">
+                  <img src="data/glossary/5.png" style="max-height:150px;" alt="Image not available"/>
+              </div>
+          </td>
+          <td class="noborder">
+              <div class="image-wrapper">
+                  <img src="data/glossary/4.png" style="max-height:150px;" alt="Image not available"/>
+              </div>
+          </td>
+          <td class="noborder">
+              <div class="image-wrapper">
+                  <img src="data/glossary/1.png" style="max-height:150px;" alt="Image not available"/>
+              </div>
+          </td>
+        </tr>
+     </table>
+<p>Both types of the graph filtration can be used to build the <i>barcode</i>.</p>
+</dd>
 
    <dt>Betti numbers </dt> <dd> We consider &beta;<sub>0</sub> (the number of connected components of the graph) and &beta;<sub>1</sub> (the number of independent cycles of the graph) as the
 core features of the attention graphs. More formally and generally these numbers are defined as dimensions of the 0-th and 1-st homology groups of the graph 
@@ -76,7 +122,24 @@ lasts from the feature's "birth" to its "death". The barcode characterizes the p
 You can find a brief explanation of this concept in <a href="https://www.youtube.com/watch?v=h0bnG1Wavag">this introductory video</a>.
 Also, refer
 to the paper <a href="https://www.ams.org/journals/bull/2009-46-02/S0273-0979-09-01249-X/S0273-0979-09-01249-X.pdf">Topology And Data</a> by Gunnar Carlsson for more formal and precise definitions.
-</p></dd>  
+</p>
+<table class="noborder">
+<tr class="noborder">
+<td width=70% class="noborder">
+<p class="main-text-p">Here we provide an example of the barcode of the little graph from the above, corresponding to the second type of filtration and the connected components feature.</p>
+<p class="main-text-p">
+At the threshold zero, we filter out all edges of the graph with weights more than zero, and four connected components are present. So there are four bars &#8212; each one 
+corresponds to one connected component. On the diagram, we draw only three of them because one connected component is always present, so there is no point in tracking its
+dynamic. When we add edges with a weight of 0.1, two connected components disappear, so two bars end at point 0.1. When we add an edge with a weight of 0.2, one more 
+connected component disappears, so the remained bar ends at 0.2.</p>
+</td>
+<td width=5% class="noborder"></td>
+<td width=25% class="noborder">
+                  <img src="data/glossary/little barcode.png" style="max-height:250px;float:right;" alt="Image not available"/>
+</td>
+</tr>
+</table>
+</dd>  
  
 </dl>
    </div>
@@ -85,6 +148,6 @@ to the paper <a href="https://www.ams.org/journals/bull/2009-46-02/S0273-0979-09
 </div></div>
 
 <p> &nbsp </p>
-<i>Designed in Notepad and hosted by Github. (C) Eduard Tulchinskii et.al., 2022. </i>
+<i>Designed in Notepad and hosted by Github. (C) TopoHuBERT team (Eduard Tulchinskii et.al.), 2022. </i>
 </body>
 </html>

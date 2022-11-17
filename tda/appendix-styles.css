@@ -1,10 +1,17 @@
 .appendix-header {
     padding-top: 50px;
-    width: 99%;
+    width: 100%;
     margin: 0 0;
     clear: both;
     text-align: center;
 }
+
+.container {
+    position:relative;
+    max-width:80%;
+    margin:0 auto;
+}
+
 
 .appendix-header h1 {
     position: relative;
@@ -18,13 +25,13 @@
 }
 
 .appendix-body {
-    width: 98%;
+    width: 100%;
 }
 
 .main-text-p {
     text-indent: 0em;   
     text-align: justify;
-    display: inline-block;
+
     margin-left: 2em;
 }
 
@@ -105,4 +112,14 @@ th, td {
 .table-text {
     text-indent: 0px;
     text-align: left;
+}
+
+dt {
+  
+   font-weight:700;
+}
+
+dd {
+    margin-bottom: 1.5em;
+    text-align: justify;
 }

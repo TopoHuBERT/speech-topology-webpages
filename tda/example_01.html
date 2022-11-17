@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="keywords" content="Page-specific keywords">
+	<title>TDA Example - TopoHuBERT</title>
+	<link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="appendix-styles.css">
+</head>
+
+<body>
+  <nav class="main-nav__links">
+    <ul>
+      <li>
+        <a href="../index.html#home">Home</a>
+      </li>
+      <li>
+	<a href="../index.html#repository">Paper and Code</a>
+      </li>
+      <li>
+	<a href="../index.html#appendix"> Appendices</a> 
+        <ul>
+          <li><a href="../appendix/A.html">A. Separation of single models</a> </li>
+          <li><a href="../appendix/B.html">B. Separation of a pair of speakers</a> </li>
+          <li><a href="../appendix/C.html">C. Attention meets Power Spectrum</a> </li>
+          <li><a href="../appendix/D.html">D. Separation of a pair of emotions</a> </li>
+         </ul>
+      </li>
+      <li>
+	<a href="../index.html#tda">TDA FAQ</a>
+        <ul>
+          <li><a href="../tda/glossary.html">TDA Glossary</a>  </li>
+          <li><a href="../tda/example_01.html">Computing topological features</a>  </li>
+          <li><a href="../tda/rtd_example.html">An example of RTD computation</a>  </li>
+          <li><a href="../tda/tdaformers.html">TDA for transformers</a>  </li>
+        </ul>
+       </li>
+       <li>
+         <a href="../index.html#contacts">Contact us</a>
+       </li>
+     </ul>
+  </nav>
+<div class="outer-border"><div class="inner-border">
+<div class="appendix-header">
+  <div class="container">
+     <h1> Computing topological features of a graph/point cloud  </h1>
+     <h3> An example  </h3>
+  </div>
+</div>
+<style>
+    video {
+        display: inline;
+        width: 100%;
+        max-width:640px;
+        object-fit: fill; // use "cover" to avoid distortion
+        position: relative;
+        align:right;
+        float:right;
+        margin-left:3em;
+ ]
+    }
+</style>
+  <div class="appendix-body">
+    <div class="container-wide">
+
+             <video autoplay align=”right” muted loop>
+               <source src="../pics/barcodes.mp4" type="video/mp4">
+               Your browser does not support the video tag.
+            </video>
+ <p class="main-text-p"> In our work we calculate features on top of the HuBERT model by applying TDA methods to the sets of embeddings of different layers, and to the attention heads. 
+      </br> One of the proposed approaches is described below, using head #4 from layer #2 for illustration purposes. 
+      </p>  
+      <p class="main-text-p"> The attention matrix can be associated with a directed weighted graph. We obtain the adjacency maxtrix of an undirected graph from it as
+    <i>A'</i>&nbsp;=&nbsp;1&nbsp;-&nbsp;<i>max(A<span class="supsub"><sup></sup><sub>attn</sub></span>&nbsp;,&nbsp;A<span class="supsub"><sup>T</sup><sub>attn</sub></span>&nbsp;)</i>.</p>
+    <p class="main-text-p"> Animation on this page transits over filtration sequence of its subgraphs increasing threshold of filtration. Heatmap on the bottom left represents symmetrized matrix filtered by the threshold, while on the top right the corresponding
+filtered graph is given. Bottom right quarter depicts the process of building the barcode.</p>
+<p class="main-text-p"> Each bar represents the "life" of a connected component in the graph from "birth" (when it first appears) till "death" (when it's been connectend to another connected component).
+We calculate the feature <i>H</i><span class="supsub"><sup>m, sym</sup><sub>0</sub></span>  as the mean length of all bars from the barcode for the input audio.</p>
+   </div>
+</div>
+
+</div></div>
+
+<p> &nbsp </p>
+<i>Designed in Notepad and hosted by Github. (C) TopoHuBERT team (Eduard Tulchinskii et.al.), 2022. </i>
+</body>
+</html>
