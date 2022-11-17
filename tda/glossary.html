@@ -55,7 +55,7 @@
    <dl>
 	   <dt><b>Attention graph</b></dt> <dd> We can treat each Transformer's attention matrix <i>A<sub>attn</sub></i> as an adjacency matrix of some weighted graph, where the vertices
 represent tokens, and the edges connect pairs of tokens with mutual attention weights. In our current work, we additionally transform this matrix by
-the following formula: <i>A'</i> = 1 - <i>max(A<span class="supsub"><sup></sup><sub>attn</sub></span> ,  A<span class="supsub"><sup>T</sup><sub>attn</sub></span> )</i>, making it symmetric. Further, we consider weighted undirected graph <i>G</i>,
+the following formula: <i>A'</i>&nbsp;=&nbsp;1&nbsp;-&nbsp;<i>max(A<span class="supsub"><sup></sup><sub>attn</sub></span>&nbsp;,&nbsp;A<span class="supsub"><sup>T</sup><sub>attn</sub></span>&nbsp;)</i>, making it symmetric. Further, we consider weighted undirected graph <i>G</i>,
 which corresponds to this new matrix <i>A'</i>. </dd>
 
 	   <dt><b> Attention graph filtration </b> </dt> <dd>Attention graph filtration is an ordered set of graphs <i>G<sup>&tau;<sub>i</sub></sup></i> filtered by increasing attention weight thresholds <i>&tau;<sub>i</sub></i>. 
