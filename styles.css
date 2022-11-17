@@ -1,10 +1,12 @@
 html, body {
     background-color: rgb(252, 254, 243);
     width: 99%;
+    max-width: 2500px;
     height: 100%;
     color: #2c3e50;
     font-family: "Open Sans",Tahoma,Verdana,Arial,sans-serif;
     line-height: 1.25;
+    margin: 0 auto;
 }
 
 .outer-confinement {
@@ -46,7 +48,15 @@ div, section {
     margin:0 auto;
 }
 
-.container:before, .container:after {
+
+.container-wide {
+    position:relative;
+    max-width:90%;
+    margin:0 auto;
+}
+
+
+.container:before, .container:after, .container-wide:before, .container-wide:afeter {
     display:block;
     content:"";
     clear:both;
@@ -72,9 +82,10 @@ div, section {
     position:fixed;
 
     padding-left:10%;
-    margin-left:0.5%;
+    margin: 0 auto;
     width:99%;
-    left:0;
+    max-width:2400px;
+
 }
 
 .main-nav__links ul {
@@ -133,7 +144,7 @@ div, section {
 
 .main-nav__links li:hover > ul{
     position: absolute;
-    display: block;
+    display : block;
 }
 
 .intro {
@@ -382,7 +393,7 @@ div, section {
     right: 0;
     left: 0;
     display: block;
-    width: 100%;
+    width=100%;
     max-width: 200px;
     margin-left: auto;
     margin-right: auto;
@@ -401,6 +412,10 @@ div, section {
     font-weight: 400;
     font-size:18pt;
     text-align: center;
+}
+
+.tda-item h4 a {
+    text-decoration: none;
 }
 
 .tda-item p {
@@ -451,16 +466,12 @@ hr {
    border-collapse: collapse;
 }
 
-.tda-item h4 a {
-    text-decoration: none;
-}
 
-@media only screen and (max-width: 1000px) {
+@media (max-width: 1000px) {
   .container {
     max-width:95%;
   }
-    
-  p {
-      font-size:12pt;
+  .tda-item h4 a {
+    font-color:red;
   }
 }

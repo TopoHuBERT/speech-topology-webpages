@@ -30,7 +30,10 @@
       <li>
 	<a href="#tda">TDA FAQ</a>
         <ul>
+          <li><a href="tda/glossary.html">TDA Glossary</a>  </li>
+          <li><a href="tda/example_01.html">Computing topological features</a>  </li>
           <li><a href="tda/rtd_example.html">An example of RTD computation</a>  </li>
+          <li><a href="tda/tdaformers.html">TDA for transformers</a>  </li>
         </ul>
        </li>
        <li>
@@ -46,6 +49,10 @@
         <h1> TopoHuBERT project </h1>
         <blockquote>
       <h3> Topological properties of attention for speech processing </h3>
+<video height="200" autoplay muted loop>
+  <source src="pics/barcodes.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
      	  <b>
 	We apply Topological Data Analysis (TDA) methods to speech classification problems and to introspection of the pre-trained speech model. To this end, we introduce a number of topological and algebraic features, which are derived from the transformer's attention maps and embeddings.  We empirically show that a simple linear classifier built on top of such features outperforms  fine-tuning classification head. In particular, we achieve an improvement of up to 9% accuracy and 5% ERR on four common datasets with the HuBERT model. On the Crema-D dataset the proposed feature set establishes a new state-of-the-art performance by reaching the performance of accuracy equal to 80.155. Last but not least we show that topological features are capable of revealing the functional roles of speech transformer heads. For example, we find the heads, that are capable to distinguish in a precise way between  emotions (sad/happy), sample source (natural/generated) or recognize one of two voices without any downstream fine-tuning. To do so, we introduce a  ranking function, which separates topological representations of a single head. The results demonstrate that TDA is a promising research direction for speech analysis, specifically, for the tasks that require structural prediction.
 	  </b>
@@ -138,14 +145,14 @@ This section presents compilation of paragraphs, maps and charts that didn't fit
       <img src="pics/topo-2.png"; width=100%; max-width=200px; alt="Image is not available">
       <h4> Introduction to TDA </h4>
       <p> Here we will provide some examples of implementation of different TDA methods used in our work.</p>
-      <p> </br> 1) Computing topological features of a graph/point cloud (<i>Coming soon</i>) </br>
+      <p> </br> <a href="tda/example_01.html"> 1) Computing topological features of a graph/point cloud </a> </br>
       <a href="tda/rtd_example.html"> 2) Computing the RTD </a> </br>
       3) <i>Coming soon</i> 
       </p>
     </figure>
     <figure class="tda-item">
       <img src="pics/topo-3.png"; width=100%; max-width=200px; alt="Image is not available">
-      <h4> TDA for Transformers </h4>
+      <h4><a href="tda/tdaformers.html"> TDA for Transformers </a></h4>
       <p> This research is not the first nor the last (hopefully) to implement methods of TDA to transformer models. 
 Here <i>will be</i> a brief overview of previous works in the field that influenced our studies.</p>
     </figure>
@@ -170,6 +177,6 @@ Serguei Barannikov, Irina Piontkovskaya, Sergey Nikolenko, and Evgeny Burnaev.</
 </div></div>
 
 
-<i>Designed in Notepad and hosted by Github. (C) Unnameable authors, somewhere on Earth, 2022. </i>
+<i>Designed in Notepad and hosted by Github. (C) TopoHuBERT team (Eduard Tulchinskii et.al.), 2022. </i>
 </body>
 </html>
