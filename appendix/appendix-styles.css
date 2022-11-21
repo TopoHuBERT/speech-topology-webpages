@@ -90,7 +90,7 @@ th, td {
    margin-bottom: 0px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
    .sub-caption p, .super-caption p {
        font-size: 12px;
        text-indent: 0;
