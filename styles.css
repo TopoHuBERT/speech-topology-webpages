@@ -147,7 +147,6 @@ div, section {
     display: inline-block;
     margin: 0 auto;
     margin-bottom: 20px;
-    font-weight: lighter;
     font-size: 1rem;
 }
 
@@ -156,7 +155,7 @@ div, section {
     display: inline-block;
     margin: 0 auto;
     margin-bottom: 20px;
-    font-weight: 500;
+    font-weight: lighter;
     text-indent: 5%;
     font-family: Roman,"Computer Modern",serif;
 }
@@ -230,7 +229,6 @@ div, section {
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    font-weight: lighter;
 }
 
 .contact-info a {
@@ -341,7 +339,6 @@ div, section {
     width: 90%;
     margin: 0 auto;
     margin-bottom: 20px;
-    font-weight: lighter;
     text-indent:5%;
 }
 
