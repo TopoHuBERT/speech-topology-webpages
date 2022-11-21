@@ -493,9 +493,7 @@ hr {
     max-widht:100%
     object-fit: fill;
 }
-.home-section blockquote p {
-    width: 100%;
-  }
+
 .home-section blockquote b {
     width: 90%;
   }
