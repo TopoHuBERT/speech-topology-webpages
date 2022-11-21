@@ -43,6 +43,7 @@
      </ul>
   </nav>
 
+<div class="outer-border"><div class="inner-border">
 
 <div class="appendix-header">
   <div class="container">
@@ -53,9 +54,46 @@
 
 <div class="appendix-body">
   <div class="container">
-    <p> Not yet implemented. </p>    
+    <p class="main-text-p"> Although Topological Data Analysis and Transformer neural networks seem
+to be unrelated, there is a list of works on the intersection of these two topics.
+Recently, the Persformer [5] was introduced, a first Transformer architecture
+that accepts persistence diagrams as input. Authors claim that the Persformer
+architecture significantly outperforms previous topological neural network architectures on classical synthetic and graph benchmark datasets. Moreover, it
+satisfies a universal approximation theorem </p>    
+
+<div class="image-wrapper">
+    <img src="data/tdaformers-01.png" style="max-height:240px" alt="Image is not available">
+	<div class="sub-caption"> <center>
+	    <p>Figure 1: Persistence image of a persistence diagram. From left to right: persistence diagram, persistence images with different resolutions. Image taken from [4].</p>
+		</center>
+	</div>
+
+</div>
+
+<p class="main-text-p"> Also, a number of works was released exploring BERT [2] from a geometric
+and topological point of view [3, 1, 4]. All of them treat attention maps as
+adjacency matrices of graphs and calculate topological statistics of them. The
+[3, 1] used various summary statistics of persistence barcodes to obtain features,
+while [4] used persistent images. [3] explored how these topological features
+relate to the naturalness of text, i.e. whether a text was artificially generated or
+written by human, and [1] explored how they correlate to linguistic phenomena
+such as grammatical correctness. </p>
+
+	<h3 align="left"> References: </h3>
+	<ol> 
+		<li> D. Cherniavskii, E. Tulchinskii, V. Mikhailov, I. Proskurina, L. Kushnareva, E. Artemova,
+S. Barannikov, I. Piontkovskaya, D. Piontkovski, and E. Burnaev. Acceptability judgements via examining the topology of attention maps. <i>arXiv preprint <a href="https://arxiv.org/abs/2205.09630">arXiv:2205.09630</a></i>,
+2022.</li>
+      <li> J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova. Bert: Pre-training of deep bidirectional transformers for language understanding. <i>arXiv preprint <a href="https://arxiv.org/abs/1810.04805">arXiv:1810.04805</a></i>, 2018.</li>
+	  <li> L. Kushnareva, D. Cherniavskii, V. Mikhailov, E. Artemova, S. Barannikov, A. Bernstein,
+I. Piontkovskaya, D. Piontkovski, and E. Burnaev. Artificial text detection via examining the topology of attention maps. In <i>Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing</i>, pages 635–649, 2021. </li>
+	  <li> I. Perez and R. Reinauer. The topological bert: Transforming attention into topology for natural language processing. <i>arXiv preprint <a href="https://arxiv.org/abs/2206.15195">arXiv:2206.15195</a></i>, 2022.  </li>
+	  <li> R. Reinauer, M. Caorsi, and N. Berkouk. Persformer: A transformer architecture for topological machine learning. <i>arXiv preprint <a href="https://arxiv.org/abs/2112.15210">arXiv:2112.15210</a></i>, 2021. </li>
+	</ol>
   </div>
 </div>
+
+</div></div>
 
 <p> &nbsp </p>
 <i>Designed in Notepad and hosted by Github. (C) TopoHuBERT team (Eduard Tulchinskii et.al.), 2022. </i>
