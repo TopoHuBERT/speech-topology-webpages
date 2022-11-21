@@ -47,7 +47,6 @@ div, section {
     margin:0 auto;
 }
 
-
 .container-wide {
     position:relative;
     max-width:90%;
@@ -80,7 +79,6 @@ div, section {
     margin: 0 auto;
     width:99%;
     max-width:2400px;
-
 }
 
 .main-nav__links ul {
@@ -154,7 +152,6 @@ div, section {
 .home-section blockquote p {
     text-align: justify;
     display: inline-block;
-    width: 90%;
     margin: 0 auto;
     margin-bottom: 20px;
     font-weight: lighter;
@@ -164,7 +161,6 @@ div, section {
 .home-section blockquote b {
     text-align: justify;
     display: inline-block;
-    width: 75%;
     margin: 0 auto;
     margin-bottom: 20px;
     font-weight: 500;
@@ -457,10 +453,14 @@ hr {
    border-collapse: collapse;
 }
 
+.index-video {
+    max-height:200px;
+    max-widht:100%
+}
 
 @media (max-width: 1000px) {
   .container {
-    max-width:95%;
+    max-width:98%;
   }
 .home-section blockquote b {
     font-size: 0.8rem;
@@ -486,7 +486,25 @@ hr {
 .tda-item h4 {
     font-size: 1.0rem;
   }
+.index-video {
+    display:none;
+    max-height:200px;
+    max-widht:100%
 }
+.index-video-top {
+    display:inline;
+    max-height:200px;
+    max-widht:100%
+    object-fit: fill;
+}
+.home-section blockquote p {
+    width: 100%;
+  }
+.home-section blockquote b {
+    width: 90%;
+  }
+}
+
 
 @media (min-width: 1001px) {
   .container {
@@ -508,5 +526,14 @@ hr {
   }
  .contact-info a {
     font-size: 18px;
+  }
+.index-video-top {
+    display:none;
+  }
+.home-section blockquote p {
+    width: 90%;
+  }
+.home-section blockquote b {
+    width: 75%;
   }
 }
