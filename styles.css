@@ -342,7 +342,6 @@ div, section {
     margin: 0 auto;
     margin-bottom: 20px;
     font-weight: lighter;
-    font-size: 1rem;
     text-indent:5%;
 }
 
@@ -465,15 +464,11 @@ hr {
     font-size: 0.9rem;
     font-weight: 500;
   }
-.home-section blockquote p, .tda-section p {
-    font-size: 1.0rem;
-  }
+
 .intro h1 {
     font-size: 1.5rem;
   }
-.contact-info p {
-    font-size: 1.0rem;
-  }
+
  h3 {
     font-size:1rem;
   }
