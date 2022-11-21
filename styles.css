@@ -452,7 +452,7 @@ hr {
     max-widht:100%
 }
 
-.upd-detector-v01 {
+.upd-detector-v02 {
    display:none;
    font-size:1px;
 }
@@ -463,6 +463,7 @@ hr {
   }
 .home-section blockquote b {
     font-size: 0.9rem;
+    font-weight: 500;
   }
 .home-section blockquote p, .tda-section p {
     font-size: 1.0rem;
@@ -503,14 +504,12 @@ hr {
 .home-section blockquote b {
     width: 90%;
   }
-.tda-section p {
-    width: 100%;
-  }
 .tda-item {
     width: 95%;
   }
 .tda-item p {
     font-size: 0.9rem;
+    font-weight: 500;
     width: 85%;
   }
 
@@ -566,3 +565,5 @@ hr {
     width: 75%;
   }
 }
+
+
