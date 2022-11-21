@@ -493,7 +493,7 @@ hr {
 }
 .index-video-top {
     display:inline;
-    max-height:200px;
+    max-height:150px;
     max-widht:100%
     object-fit: fill;
 }
