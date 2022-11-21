@@ -516,6 +516,10 @@ hr {
     margin-top:-25px;
     width:100%;
   }
+ .contacts-section {
+    margin-left: 8%;
+    width: 84%;
+ }
 }
 
 @media (max-width: 640px) {
