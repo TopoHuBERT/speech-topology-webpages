@@ -45,11 +45,6 @@
 <div class="outer-border"><div class="inner-border">
 <section class="home-section" id="home">
   <div class="container">
-  <center>
-   <video class="index-video-top"  autoplay muted loop>
-  <source src="pics/barcodes.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video> </center>
     <header class="home-section__header">
       <div class="intro">
         <h1> TopoHuBERT project </h1>
@@ -63,7 +58,7 @@ Your browser does not support the video tag.
      	  <b>
 	We apply Topological Data Analysis (TDA) methods to speech classification problems and to introspection of the pre-trained speech model. To this end, we introduce a number of topological and algebraic features, which are derived from the transformer's attention maps and embeddings.  We empirically show that a simple linear classifier built on top of such features outperforms  fine-tuning classification head. In particular, we achieve an improvement of up to 9% accuracy and 5% ERR on four common datasets with the HuBERT model. On the Crema-D dataset the proposed feature set establishes a new state-of-the-art performance by reaching the performance of accuracy equal to 80.155. Last but not least we show that topological features are capable of revealing the functional roles of speech transformer heads. For example, we find the heads, that are capable to distinguish in a precise way between  emotions (sad/happy), sample source (natural/generated) or recognize one of two voices without any downstream fine-tuning. To do so, we introduce a  ranking function, which separates topological representations of a single head. The results demonstrate that TDA is a promising research direction for speech analysis, specifically, for the tasks that require structural prediction.
 	  </b>
-<p>
+       <p>
              This webpage provides suplementoral and additional material for the article "Topological properties of attention for speech processing"
  that we submitted to the Conference. 
 Due to the strict constraints on the the size of the submitions, in our paper we had to omit or mention too briefly some of the achieved results, 
@@ -108,7 +103,7 @@ but here we can present them in their enterietry without any fear for page count
       </p>
       <ul>
          <li><b>ASVSpoof 2019 </b> available at <a href="https://datashare.ed.ac.uk/handle/10283/3336"> datashare.ed.ac.uk/handle/10283/3336 </a>. We used only LA part from it for the task of Detection of Synthetic Speech. </li>
-         <li><b>CREMA-D </b>available at <a href="https://github.com/CheyneyComputerScience/CREMA-D">github.com/CheyneyComputerScience/ CREMA-D </a>.</li> 
+         <li><b>CREMA-D </b>available at <a href="https://github.com/CheyneyComputerScience/CREMA-D">github.com/CheyneyComputerScience/CREMA-D </a>.</li> 
          <li><b>IEMOCAP </b> available at <a href="https://sail.usc.edu/iemocap/"> sail.usc.edu/iemocap</a>. We used it according to the <a href="https://arxiv.org/pdf/2105.01051.pdf">procedures</a> implemented in <a href="https://superbbenchmark.org/">SUPERB</a> benchmark. </li>
          <li><b>VoxCeleb1</b> available at <a href="https://www.robots.ox.ac.uk/~vgg/data/voxceleb/">www.robots.ox.ac.uk/~vgg/data/voxceleb/</a>. We used it according to the procedures implemented in SUPERB benchmark. </li>
       </ul>
@@ -120,7 +115,6 @@ but here we can present them in their enterietry without any fear for page count
       <header class="appnd-section__header">
         <h2> Appendices and Supplementary Material </h2>
       </header>
-    <div class="appnd-info">
     <p> We used several approaches to studying the topology and spectral properties of attention maps of HuBERT model and performed various experiments, but due to the tight size constraints were unable to put them all into our paper.
 This section presents compilation of paragraphs, maps and charts that didn't fit into the article or (in a different circumstances) would make its appendix. </p>
     <ul>
@@ -129,7 +123,6 @@ This section presents compilation of paragraphs, maps and charts that didn't fit
       <li> <a href="appendix/C.html">Appendix C. Attention meets Power Spectrum</a>, where we explore the correlation between our attention features and features calculated from the power spectrum of the utterance. </li>
       <li> <a href="appendix/D.html">Appendix D. Separation of a pair of emotions</a>, where we show how our topological features can distinguish between a pair of emotions . </li>
     </ul>
-    </div>
     </class>
 </section>
 
@@ -179,7 +172,187 @@ Serguei Barannikov, Irina Piontkovskaya, Sergey Nikolenko, and Evgeny Burnaev.</
     </div>
   </div>
 </section>
-<p> &nbsp <i class="upd-detector-v00"> &nbsp </i> </p>
+<p> &nbsp <i class="upd-detector-v03"> &nbsp </i> </p>
+</div></div>
+
+<i>Designed in Notepad and hosted by Github. (C) TopoHuBERT team (Eduard Tulchinskii et.al.), 2022. </i>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="keywords" content="Page-specific keywords">
+	<title>TopoHuBERT</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav class="main-nav__links">
+    <ul>
+      <li>
+        <a href="#home">TopoHuBERT</a>
+      </li>
+      <li>
+	<a href="#repository">Paper and Code</a>
+      </li>
+      <li>
+	<a href="#appendix"> Appendices</a> 
+        <ul>
+          <li><a href="appendix/A.html">A. Separation of single models</a> </li>
+          <li><a href="appendix/B.html">B. Separation of a pair of speakers</a> </li>
+          <li><a href="appendix/C.html">C. Attention meets Power Spectrum</a> </li>
+          <li><a href="appendix/D.html">D. Separation of a pair of emotions</a> </li>
+         </ul>
+      </li>
+      <li>
+	<a href="#tda">TDA FAQ</a>
+        <ul>
+          <li><a href="tda/glossary.html">TDA Glossary</a>  </li>
+          <li><a href="tda/example_01.html">Computing topological features</a>  </li>
+          <li><a href="tda/rtd_example.html">An example of RTD computation</a>  </li>
+          <li><a href="tda/tdaformers.html">TDA for transformers</a>  </li>
+        </ul>
+       </li>
+       <li>
+         <a href="#contacts">Contact us</a>
+       </li>
+     </ul>
+  </nav>
+
+<div class="outer-border"><div class="inner-border">
+<section class="home-section" id="home">
+  <div class="container">
+    <header class="home-section__header">
+      <div class="intro">
+        <h1> TopoHuBERT project </h1>
+        <blockquote>
+      <h3> Topological properties of attention for speech processing </h3>
+	  
+<video class="index-video" autoplay muted loop>
+  <source src="pics/barcodes.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+     	  <b>
+	We apply Topological Data Analysis (TDA) methods to speech classification problems and to introspection of the pre-trained speech model. To this end, we introduce a number of topological and algebraic features, which are derived from the transformer's attention maps and embeddings.  We empirically show that a simple linear classifier built on top of such features outperforms  fine-tuning classification head. In particular, we achieve an improvement of up to 9% accuracy and 5% ERR on four common datasets with the HuBERT model. On the Crema-D dataset the proposed feature set establishes a new state-of-the-art performance by reaching the performance of accuracy equal to 80.155. Last but not least we show that topological features are capable of revealing the functional roles of speech transformer heads. For example, we find the heads, that are capable to distinguish in a precise way between  emotions (sad/happy), sample source (natural/generated) or recognize one of two voices without any downstream fine-tuning. To do so, we introduce a  ranking function, which separates topological representations of a single head. The results demonstrate that TDA is a promising research direction for speech analysis, specifically, for the tasks that require structural prediction.
+	  </b>
+       <p>
+             This webpage provides suplementoral and additional material for the article "Topological properties of attention for speech processing"
+ that we submitted to the Conference. 
+Due to the strict constraints on the the size of the submitions, in our paper we had to omit or mention too briefly some of the achieved results, 
+but here we can present them in their enterietry without any fear for page count.
+            </p>
+        </blockquote>
+      </div>
+    </header>
+  </div>
+</section>
+
+<section-class="paper-section" id="repository">
+  <div class="container">
+      <header class="paper-section__header">
+          <h2> Article and Source Code </h2>
+      </header>
+      <table class="noborder">
+          <tr class="noborder">
+             <td class="noborder"; width=10%>
+                <img src="pics/article.png";  width=100%; alt="scripted paper"> 
+             </td>
+             <td class="noborder"; width=1.5%> &nbsp; </td>
+             <td class="noborder"; width=36%>
+               <h4> Our article  </h4>
+               <i> Article "Topological properties of attention for speech processing" is currently under review. When it is published, here will be a link to it. </i>
+             </td> 
+             <td class="noborder"; width=5%> &nbsp; </td>
+             <td class="noborder"; width=14%>
+               <img src="pics/github-logo.png";  width=100%;  alt="Github logo"> 
+             </td>
+             <td class="noborder"; width=1.5%> &nbsp; </td>
+             <td class="noborder"; width=32%> 
+               <h4> Our repository  </h4>
+               <p> Repository with code that allows to reproduce experiments from our paper or try them on a completely new task or dataset is available at ...&nbsp. </p>
+               <i> Right now it is under constuction</i>
+             </td>
+          </tr>
+      </table>
+      <p> &nbsp; </p>
+      <h4 align="center"> Used datasets </h4>
+      <p> In our work we used several publicaly available datasets. Here we would like to thank authors of the datasers and provide quick links to the websites of those projects.
+      </p>
+      <ul>
+         <li><b>ASVSpoof 2019 </b> available at <a href="https://datashare.ed.ac.uk/handle/10283/3336"> datashare.ed.ac.uk/handle/10283/3336 </a>. We used only LA part from it for the task of Detection of Synthetic Speech. </li>
+         <li><b>CREMA-D </b>available at <a href="https://github.com/CheyneyComputerScience/CREMA-D">github.com/CheyneyComputerScience/CREMA-D </a>.</li> 
+         <li><b>IEMOCAP </b> available at <a href="https://sail.usc.edu/iemocap/"> sail.usc.edu/iemocap</a>. We used it according to the <a href="https://arxiv.org/pdf/2105.01051.pdf">procedures</a> implemented in <a href="https://superbbenchmark.org/">SUPERB</a> benchmark. </li>
+         <li><b>VoxCeleb1</b> available at <a href="https://www.robots.ox.ac.uk/~vgg/data/voxceleb/">www.robots.ox.ac.uk/~vgg/data/voxceleb/</a>. We used it according to the procedures implemented in SUPERB benchmark. </li>
+      </ul>
+  </div>
+</section>
+
+<section class="appnd-section" id="appendix">
+    <div class="container">
+      <header class="appnd-section__header">
+        <h2> Appendices and Supplementary Material </h2>
+      </header>
+    <p> We used several approaches to studying the topology and spectral properties of attention maps of HuBERT model and performed various experiments, but due to the tight size constraints were unable to put them all into our paper.
+This section presents compilation of paragraphs, maps and charts that didn't fit into the article or (in a different circumstances) would make its appendix. </p>
+    <ul>
+      <li> <a href="appendix/A.html">Appendix A. Separation of single models</a>,  where we show that (if we know which Spoofing model is playing against us) a single HuBERT head is often enough to sucessfully detect synthetic speech.</li>
+      <li> <a href="appendix/B.html">Appendix B. Separation of a pair of speakers</a>, where we show that from HuBERT perspective speech of (almost) any random pair of people differs very much, but if there are too many people those differences interfere into incomperehensible noise. </li>
+      <li> <a href="appendix/C.html">Appendix C. Attention meets Power Spectrum</a>, where we explore the correlation between our attention features and features calculated from the power spectrum of the utterance. </li>
+      <li> <a href="appendix/D.html">Appendix D. Separation of a pair of emotions</a>, where we show how our topological features can distinguish between a pair of emotions . </li>
+    </ul>
+    </class>
+</section>
+
+<section class="tda-section" id="tda">
+  <div class="container">
+    <header class="tda-section__header">
+       <h2> About Topological Data Analysis </h2>
+    </header>
+    <p> In our work we extensively use methods of Topological Data Analysis (TDA), a modern field that was developed from numerous works in algebraic topology and computational geometry over the last two decades.
+ We know that due to the novelty of TDA our Reader may not be accustomed with it, however short format didn't allow us to put proper explanations in the paper.</p> 
+ <p> Here we will attempt to provide information necessary for better understanding of the topology-related part of our paper: a glossary, analysis of features used in our models, and references to other works implementing TDA methods for Transformer models (not only speech). </p>
+  
+  <div class="grid-container-tda">
+    <figure class="tda-item">
+      <img src="pics/topo-1.png"; width=100%; max-width=200px; alt="Image is not available">
+      <h4><a href="tda/glossary.html">TDA Glossary</a> </h4>
+      <p> Glossary of TDA terminology used in our paper and a brief introduction to Topological Data Analysis </p>
+    </figure>
+    <figure class="tda-item">
+      <img src="pics/topo-2.png"; width=100%; max-width=200px; alt="Image is not available">
+      <h4> Introduction to TDA </h4>
+      <p> Here we will provide some examples of implementation of different TDA methods used in our work.</p>
+      <p style="text-align:left"> </br> <a href="tda/example_01.html"> 1) Computing topological features of a graph/point cloud </a> </br>
+      </br> <a href="tda/rtd_example.html"> 2) Computing the RTD </a> 
+      </p>
+    </figure>
+    <figure class="tda-item">
+      <img src="pics/topo-3.png"; width=100%; max-width=200px; alt="Image is not available">
+      <h4><a href="tda/tdaformers.html"> TDA for Transformers </a></h4>
+      <p> This research is not the first nor the last (hopefully) to implement methods of TDA to transformer models. 
+Here is a brief overview of previous works in the field that influenced our studies.</p>
+    </figure>
+  </div> 
+  </div>
+</section>
+
+<section class="contacts-section" id="contacts">
+  <div class="container">
+    <header class="contacts-section__header">
+      <img src="pics/mail-icon.png" alt="E-Mail"> 
+      <h2> Contact information </h2>
+    </header>
+    <div class="contact-info">
+        <p> &nbsp &nbsp &nbsp  We are the research team behind the article "Topological properties of attention for speech processing" and this webpage: </br><i> Eduard Tulchinskii, Kristian Kuznetsov, Laida Kushnareva, Daniil Cherniavskii,
+Serguei Barannikov, Irina Piontkovskaya, Sergey Nikolenko, and Evgeny Burnaev.</i></p>
+	<p> Right now you can contact us via e-mail at &nbsp <a class="email" href="oa0188594@gmail.com"> oa0188594@gmail.com </a> </p>
+    </div>
+  </div>
+</section>
+<p> &nbsp <i class="upd-detector-v03"> &nbsp </i> </p>
 </div></div>
 
 <i>Designed in Notepad and hosted by Github. (C) TopoHuBERT team (Eduard Tulchinskii et.al.), 2022. </i>
