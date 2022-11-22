@@ -374,7 +374,7 @@ div, section {
     left: 0;
     display: block;
     width=100%;
-    max-width: 200px;
+    max-width: 320px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 25px;
@@ -460,6 +460,11 @@ hr {
   .container {
     max-width:98%;
   }
+.index-video {
+    max-height:200px;
+    max-widht:100%
+    object-fit: fill;
+}
 .home-section blockquote b {
     font-size: 0.9rem;
     font-weight: 500;
@@ -484,29 +489,18 @@ hr {
 .main-nav__links li > ul{
     display : none;
     margin-top: 0px;
-}
+  }
 
 .main-nav__links li > ul li a {
     line-height: 1.5em;
     padding: 0.5em 2em;
-}
+  }
 
 
 .tda-item h4 {
     font-size: 1.1rem;
     font-weight: 700;
   }
-.index-video {
-    display:none;
-    max-height:200px;
-    max-widht:100%
-}
-.index-video-top {
-    display:inline;
-    max-height:150px;
-    max-widht:100%
-    object-fit: fill;
-}
 
 .home-section blockquote b {
     width: 90%;
@@ -519,26 +513,43 @@ hr {
     font-weight: 400;
     width: 85%;
   }
-
-.appnd-section__header h2:before, .appnd-section__header h2:after {
-    margin-top:-25px;
-    width:100%;
-}
-
-}
-
-
-@media (max-width: 800px) {
-.paper-section__header h2:before, .paper-section__header h2:after, .tda-section__header h2:before, .tda-section__header h2:after  {
+ .tda-section__header h2:before, .tda-section__header h2:after  {
     margin-top:-25px;
     width:100%;
   }
+}
+
+@media (max-width: 1200px) {
+ .appnd-section__header h2:before, .appnd-section__header h2:after {
+    margin-top:-25px;
+    width:100%;
+}
+.paper-section__header h2:before, .paper-section__header h2:after  {
+    margin-top:-25px;
+    width:100%;
+  }
+}
+
+@media (max-width: 800px) {
 .contacts-section {
     margin-left: 8%;
     width: 84%;
 }
-
+.index-video {
+    max-height:150px;
+    max-widht:100%
+    object-fit: fill;
 }
+}
+@media (max-width: 640px) {
+.index-video {
+    max-height:120px;
+    max-widht:100%
+    object-fit: fill;
+}
+}
+
+
 
 @media (max-width: 640px) {
 .home-section h1:before, .home-section h1:after {
@@ -566,9 +577,6 @@ hr {
   }
  .contact-info a {
     font-size: 18px;
-  }
-.index-video-top {
-    display:none;
   }
 .home-section blockquote p {
     width: 90%;
