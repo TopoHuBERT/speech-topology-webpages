@@ -8,7 +8,6 @@
 
 .container {
     position:relative;
-    max-width:80%;
     margin:0 auto;
 }
 
@@ -122,4 +121,51 @@ dt {
 dd {
     margin-bottom: 1.5em;
     text-align: justify;
+}
+
+.span-wrapper {
+     margin-top: 20px;
+     height: 100%;
+     float:right;
+     display: flex;
+     align-items: flex-end;
+}
+
+.box-wrapper {
+    overflow: hidden;
+    display:flex;
+    margin-bottom: 0px;
+}
+
+#intext-img {
+   clear:both;
+   float:right;
+   margin: 0 0 10px 15px;
+   width:20%;
+   min-width:180px;
+}
+
+#double-rtd-intext-img {
+   display:block;
+   clear:both;
+   float:right;
+   margin: 0 0 10px 15px;
+   width:20%;
+   min-width:180px;
+}
+
+
+
+@media (max-width:1000px) {
+   .cotainer {
+      width:95%;
+  }
+}
+
+@media (min-width: 1001px) {
+  .container {
+    width:80%;
+  }
+}
+
 }
